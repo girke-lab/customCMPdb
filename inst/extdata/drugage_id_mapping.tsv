@@ -1,0 +1,426 @@
+compound_name	synonyms	species	strain	dosage	avg_lifespan_change	max_lifespan_change	gender	significance	pubmed_id	Comment	pref_name	chembl_id	pubchem_cid	DrugBank_id
+Vitexin	NA	Caenorhabditis elegans	N2	50 µM	8	5.3	NA	NA	26535084	NA	VITEXIN	CHEMBL487417	5280441	NA
+Cyclosporin A	NA	Caenorhabditis elegans	NA	88 µM	18	NA	NA	NA	24134630	NA	NA	CHEMBL160	NA	DB00091
+Histidine	L-histidine	Caenorhabditis elegans	N2	5 mM	10	NA	NA	NA	25643626	NA	HISTIDINE	CHEMBL17962	6274, 6971009	DB00117
+SRT1720	NA	Mus musculus	C57BL/6J	100 mg/kg body weight	8.8	0	NA	NA	24582957	NA	NA	CHEMBL257991	NA	NA
+Cordyceps sinensis oral liquid	NA	Drosophila melanogaster	Oregon-K	0.20 mg/ml	32	15.4	Male	NA	26239097	Mix	NA	NA	NA	NA
+Lysine	NA	Caenorhabditis elegans	N2	5 mM	8	NA	NA	NA	25643626	NA	LYSINE	CHEMBL8085	5962, 122198194	DB00123, DB11101
+Kinetin	NA	Zaprionus paravittiger	NA	3125 ppm	-71	-47.1	Male	NA	7488181	NA	KINETIN	CHEMBL228792	3830	DB11336
+Arginine	NA	Caenorhabditis elegans	N2	1 mM	8	NA	NA	NA	25643626	NA	ARGININE	CHEMBL1485	28782, 6322	DB00125
+Leucine	NA	Caenorhabditis elegans	N2	1 mM	16	NA	NA	NA	25643626	NA	LEUCINE	CHEMBL291962	7045798, 6106	DB00149
+Rapamycin	NA	Mus musculus	Hybrid of CB6F1(F)& C3D2F1(M)	2.24 mg/kg/day	13	14	Female	NA	19587680	NA	NA	CHEMBL413	NA	DB00877, DB02439
+Ascorbic Acid	Vitamin C	Caenorhabditis elegans	N2	80 µg/ml	0	NA	NA	NA	3374177	NA	ASCORBIC ACID	CHEMBL196	54670067	DB00126, DB11167, DB11316, DB11170, DB09541, DB11317
+Ascorbic acid	Vitamin C	Paramecium tetraurelia	NA	50 mg/L	12.1	6.7	NA	NA	9406982	NA	ASCORBIC ACID	CHEMBL196	54670067	DB00126, DB11167, DB11316, DB11170, DB09541, DB11317
+Ciclopirox olamine	NA	Caenorhabditis elegans	N2	0.0001	41	52	NA	NA	22114686	Mix	NA	NA	NA	NA
+Spermine	SPM	Mus musculus	Crj:CD-1	3 mg.kg-1.dose-1	NA	NA	Female	NA	21858192	NA	SPERMINE	CHEMBL23194	1103	DB00127, DB02564
+Ethoxyquin	NA	Mus musculus	C3H	0.5% w/w	18.1	NA	Male	NA	4927196	NA	NA	CHEMBL172064	3293	NA
+Ornithine	NA	Caenorhabditis elegans	N2	100 µM	3	NA	NA	NS	25643626	NA	ORNITHINE	CHEMBL446143	6262, 88747248	DB00129
+Glutamine	NA	Caenorhabditis elegans	N2	1 mM	15	NA	NA	NA	25643626	NA	GLUTAMINE	CHEMBL930	6992086, 5961	DB00130
+Dihydroergotamine methanesulfonate	NA	Caenorhabditis elegans	NA	88 µM	24	NA	NA	NA	24134630	NA	NA	CHEMBL1200517	NA	DB00320, DB05743
+(S)-2-hydroxyglutarate	NA	Caenorhabditis elegans	NA	8 mM	31.8	NA	NA	NA	26190651	NA	NA	CHEMBL1615211	NA	NA
+Serine	L-serine	Caenorhabditis elegans	N2	10 mM	9	NA	NA	NA	25643626	NA	SERINE	CHEMBL11298	6857581, 5951	DB00133, DB03375
+Sulfamethoxazole	SMX	Caenorhabditis elegans	N2	400 µM	18	0	NA	NA	24034891	NA	SULFAMETHOXAZOLE	CHEMBL443	5329	DB01015
+Methionine	NA	Caenorhabditis elegans	N2	5 mM	8	NA	NA	NA	25643626	NA	METHIONINE	CHEMBL42336	6137, 6992087	DB00134
+Tyrosine	NA	Caenorhabditis elegans	N2	10 mM	2	NA	NA	NS	25643626	NA	TYROSINE	CHEMBL925	6942100, 6057	DB00135
+Jania acutilobum extract	Red Algae extract	Brachionus manjavacas	NA	5 µg/ml	9.1	NA	NA	NA	24120568	Mix	NA	NA	NA	NA
+Lutein	NA	Drosophila melanogaster	NA	0.1 mg/ml	11.4	NA	NA	NA	23993264	NA	LUTEIN	CHEMBL173929	5281243	DB00137, DB11138
+SU 4312	NA	Caenorhabditis elegans	NA	88µM	5	NA	NA	NA	24134630	NA	NA	CHEMBL328710	6450842	NA
+Reserpine	NA	Caenorhabditis elegans	N2	30 µM	31	NA	NA	NA	18409080	NA	RESERPINE	CHEMBL772	5770	DB00206
+Succinate	NA	Caenorhabditis elegans	N2	10 mM	4	NA	NA	NS	25643626	NA	NA	CHEMBL576	NA	DB00139
+N-acetylglucosamine	GlcNAc or NAG	Caenorhabditis elegans	N2	10 mM	50	NA	NA	NA	24630720	NA	NA	CHEMBL447878	NA	DB00141
+Glutamate	NA	Caenorhabditis elegans	N2	1 mM	14	NA	NA	NA	25643626	NA	NA	CHEMBL575060	NA	DB00142
+Nectarine	NA	Drosophila melanogaster	Canton S	0.04	17.6	2.7	Female	NA	21406223	Mix	NA	NA	NA	NA
+Glutathione	NA	Caenorhabditis elegans	N2	25µL Liposomes + 360µg glutathione	NA	50	NA	NA	19580823	NA	GLUTATHIONE	CHEMBL1543	25246407, 124886	DB00143
+Guanabenz acetate	NA	Caenorhabditis elegans	NA	88 µM	12	NA	NA	NA	24134630	NA	GUANABENZ ACETATE	CHEMBL1200560	9570374, 5702062	DB00629
+Danazol	NA	Caenorhabditis elegans	NA	33 µM	13	NA	NA	NA	24134630	NA	DANAZOL	CHEMBL1479	28417	DB01406
+Glycine	NA	Caenorhabditis elegans	N2	5 mM	3	NA	NA	NS	25643626	NA	GLYCINE	CHEMBL773	750, 5257127	DB00145
+Creatine	NA	Mus musculus	C57BL/6J	0.01	8	3.5	Female	NA	17416441	NA	CREATINE	CHEMBL283800	59098743, 586	DB00148
+Electrolyzed reduced water	TI-200 ERW	Caenorhabditis elegans	N2	NA	41	0	NA	NA	20944427	Mix	NA	NA	NA	NA
+KN-93	NA	Drosophila melanogaster	Oregon R	10-100 µM	20	NA	NA	NA	22363408	NA	NA	CHEMBL155333	NA	NA
+Tryptophan	NA	Caenorhabditis elegans	N2	1 mM	14	NA	NA	NA	25643626	NA	TRYPTOPHAN	CHEMBL54976	6305, 6923516	DB00150
+Erchen wan	EC	Caenorhabditis elegans	N2	1.5 g/L	21.8	NA	NA	NA	24952637	Mix	NA	NA	NA	NA
+Glucose	Dextrose; D-glucose	Saccharomyces cerevisiae	PSY316	10%	19.8	NA	NA	NA	12391171	NA	NA	CHEMBL1222250	NA	DB09341
+Butein	NA	Saccharomyces cerevisiae	PSY316AT MAT_	10 µM	31	NA	NA	NA	12939617	NA	BUTEIN	CHEMBL128000	5281222	NA
+Threonine	NA	Caenorhabditis elegans	N2	5 mM	3	NA	NA	NS	25643626	NA	THREONINE	CHEMBL291747	6288, 6971019	DB00156
+Folic acid	NA	Caenorhabditis elegans	N2	50 µM	0.2	NA	NA	NS	26546011	NA	FOLIC ACID	CHEMBL1622	6037	DB00158
+HF-HQ	NA	Caenorhabditis elegans	N2	400 µM	20	NA	NA	NA	22529848	Mix	NA	NA	NA	NA
+Alanine	NA	Caenorhabditis elegans	N2	1 mM	8	NA	NA	NA	25643626	NA	ALANINE	CHEMBL12198	57383916, 602	DB00160
+Platinum nanoparticles	nano-Pt	Caenorhabditis elegans	N2	0.5 mM	22	NA	NA	NA	18400258	Mix	NA	NA	NA	NA
+Gallic Acid	NA	Caenorhabditis elegans	N2	300 µM	10	NA	NA	NA	21805983	NA	GALLIC ACID	CHEMBL288114	370	NA
+Valine	NA	Caenorhabditis elegans	N2	1 mM	13	NA	NA	NS	25643626	NA	VALINE	CHEMBL43068	6287, 88733505, 6971018	DB00161
+Isoleucine	NA	Caenorhabditis elegans	N2	1 mM	3	NA	NA	NS	25643626	NA	ISOLEUCINE	CHEMBL1233584	7043901, 6306	DB00167
+N-tert-butyl-alpha-phenylnitrone	PBN; alpha phenyl-N-tert butyl nitrone	Mus musculus	C57BL/6J	0.25 mg/ml of water	3.8	5	Male	NA	9614711	NA	NA	CHEMBL13210	NA	NA
+Alpha-lipoic acid	Lipoic acid	Drosophila melanogaster	Canton S	0.00005	12	5	Female	NA	15328413	NA	NA	CHEMBL33864	NA	DB00166
+Protocatechuic acid	NA	Caenorhabditis elegans	N2	100  µM	23	25	NA	NA	23780797	NA	PROTOCATECHUIC ACID	CHEMBL37537	72	DB03946
+Gluconic acid	NA	Drosophila melanogaster	Oregon R	1 M	-9.3	NA	Male	NA	110607	NA	GLUCONIC ACID	CHEMBL464345	10690	DB13180, DB09408
+Vitamin D3	NA	Caenorhabditis elegans	N2	1000 µg/ml	23	NA	NA	NA	24304198	NA	NA	CHEMBL1042	NA	DB00169
+Proline	L-proline	Caenorhabditis elegans	N2	5 uM	5.8	NA	NA	NA	22482728	NA	PROLINE	CHEMBL54922, CHEMBL72275	NA	DB00172
+3,4-dihydroxybenzaldehyde	protocatechuic aldehyde	Drosophila melanogaster	yw (y1w67c23)	0.3 mM	13	NA	Female	NA	22809229	NA	NA	CHEMBL222021	NA	DB11268
+Asparagine	NA	Caenorhabditis elegans	N2	1 mM	1	NA	NA	NS	25643626	NA	ASPARAGINE	CHEMBL58832	6267, 6992089	DB00174
+Freeze dried royal jelly	FDRJ	Drosophila melanogaster	Oregon R	1% w/v	8.5	-4	Male	NA	23132575	Mix	NA	NA	NA	NA
+Caffeine	NA	Drosophila melanogaster	Oregon R	0.01 mg/ml	-10.1	NA	Male	NS	8326745	NA	CAFFEINE	CHEMBL113	2519	DB00201
+DL-lactate	NA	Caenorhabditis elegans	N2	5 mM	6	NA	NA	NA	25643626	NA	NA	CHEMBL1357	NA	NA
+Rifamycin SV	NA	Caenorhabditis elegans	N2	50 µM	20.9	NA	NA	NA	25720500	NA	NA	CHEMBL437765	NA	DB11753, DB05378
+Doxycycline	NA	Caenorhabditis elegans	N2	30 µg/ml	36.5	NA	NA	NA	23698443	NA	DOXYCYCLINE	CHEMBL1433, CHEMBL1200699	NA	DB00254
+Metoprolol	NA	Mus musculus	C3B6F1	1.1 g/kg diet	10	NA	Male	NA	23314750	NA	METOPROLOL	CHEMBL13	4171	DB00264
+Sodium borate	NA	Drosophila melanogaster	Oregon R	0.01 M	-69.2	NA	Male	NA	7889879	NA	SODIUM BORATE	CHEMBL3833375	16211214	DB14505, DBSALT002513
+D-xylitol	NA	Saccharomyces cerevisiae	PSY316	1 M	36.8	NA	NA	NA	12391171	NA	NA	CHEMBL1865120	NA	DB01904
+Acarbose	ACA	Mus musculus	UM-HET3	1000mg/kgdiet	5	9	Female	NA	24245565	NA	ACARBOSE	CHEMBL404271, CHEMBL1566	NA	DB00284
+Morphine	NA	Drosophila melanogaster	Oregon R	NA	3.2	NA	NA	NA	21061062	NA	MORPHINE	CHEMBL70	5288826	DB00295, DB05354
+Nicotinamide	Vitamin B3	Caenorhabditis elegans	N2	100 µM	6.5	6	NA	NA	24077178	NA	NA	CHEMBL1140	NA	DB02701
+Valproic acid	NA	Caenorhabditis elegans	N2	6 mM	35	42	NA	NA	18248662	NA	VALPROIC ACID	CHEMBL109	3121	DB00313, DB00510
+Doxazosin mesylate	NA	Caenorhabditis elegans	NA	33 µM	15	NA	NA	NA	24134630	NA	DOXAZOSIN MESYLATE	CHEMBL1200561	25137856, 45039113, 62978	DB00590
+Acetaminophen	NA	Caenorhabditis elegans	N2	0.0001	48.6	59	NA	NA	22114686	NA	ACETAMINOPHEN	CHEMBL112	1983	DB00316
+Korean mistletoe extract	Viscum album coloratum extract	Drosophila melanogaster	Canton S	50 µg/ml	19.9	NA	NA	NA	24337961	Mix	NA	NA	NA	NA
+Chloramphenicol	NA	Caenorhabditis elegans	N2	100 µg/ml	15.8	NA	NA	NA	23698443	NA	CHLORAMPHENICOL	CHEMBL130	5959	DB00446
+Metformin	NA	Rattus norvegicus	Fischer 344	300 mg/kg/day	2.3	2.1	NA	NS	20304770	NA	METFORMIN	CHEMBL1431	4091	DB00331
+Cranberry anthocyanin extract	NA	Drosophila melanogaster	Oregon-R-C	5 mg/ml	6.3	0	"
+"	NA	26159161	Mix	NA	NA	NA	NA
+Trimethadione	NA	Caenorhabditis elegans	N2	4 mg/ml	47	57	NA	NA	15653505	NA	TRIMETHADIONE	CHEMBL695	5576	DB00347
+Dimethyl sulfoxide	NA	Caenorhabditis elegans	N2	0.005	29	18.6	NA	NA	20828537	NA	NA	CHEMBL504	679	DB01093
+Loxapine succinate	NA	Caenorhabditis elegans	NA	88µM	43	NA	NA	NA	24134630	NA	LOXAPINE SUCCINATE	CHEMBL1201155	71399, 25137852	DB00408
+Butylated hydroxytoluene	NA	Mus musculus	BaLB/c	NA	15.8	NA	Female	NA	448040	NA	BUTYLATED HYDROXYTOLUENE	CHEMBL146	31404	NA
+Ampicillin	NA	Caenorhabditis elegans	fem-1(hc17)	100µg/ml	34	NA	NA	NA	16441844	NA	NA	CHEMBL174	NA	DB00415
+Lithium Chloride	NA	Caenorhabditis elegans	N2	10 mM	36	NA	NA	NA	17959600	NA	NA	CHEMBL69710	NA	NA
+Thyroxin	T4	Rattus norvegicus	Wistar	0.5 µg/g bodyweight	-3.5	NA	Female	NA	6632988	NA	NA	CHEMBL1624	NA	DB00451
+Cranberry Extract	CBE	Caenorhabditis elegans	N2	2 mg/mL	32.5	NA	NA	NA	22864793	Mix	NA	NA	NA	NA
+Lamotrigine	NA	Drosophila melanogaster	Ives	12 mg/ml	15.4	NA	Male	NA	19430925	NA	LAMOTRIGINE	CHEMBL741	3878	DB00555
+Loratadine	NA	Caenorhabditis elegans	NA	33 µM	18	NA	NA	NA	24134630	NA	LORATADINE	CHEMBL998	3957	DB00455
+Celecoxib	NA	Caenorhabditis elegans	N2	10µm	19	NA	NA	NA	21348927	NA	CELECOXIB	CHEMBL118	2662	DB00482
+Gluconate	NA	Caenorhabditis elegans	N2	5 mM	17	NA	NA	NA	25643626	NA	NA	CHEMBL464345	NA	DB13180
+Nortriptyline hydrochloride	NA	Caenorhabditis elegans	NA	88 µM	21	NA	NA	NA	24134630	NA	NORTRIPTYLINE HYDROCHLORIDE	CHEMBL1201156	657214, 441358, 13468	"DBSALT000641
+"
+Vincristine sulfate	NA	Caenorhabditis elegans	NA	88µM	12	NA	NA	NA	24134630	NA	VINCRISTINE SULFATE	CHEMBL501867	249332	"DBSALT000314
+"
+Amoxapine	NA	Caenorhabditis elegans	NA	88 µM	33	NA	NA	NA	24134630	NA	AMOXAPINE	CHEMBL1113	2170	DB00543
+HA-1077	NA	Drosophila melanogaster	Oregon R	10 µM	14.5	NA	NA	NA	22363408	NA	NA	CHEMBL541388	NA	DB08162, DB12469
+Minocycline hydrochloride	NA	Caenorhabditis elegans	NA	88 µM	29	NA	NA	NA	24134630	NA	MINOCYCLINE HYDROCHLORIDE	CHEMBL1200881	NA	DBSALT000721
+Cinnarizine	NA	Caenorhabditis elegans	NA	33 µM	15	NA	NA	NA	24134630	NA	CINNARIZINE	CHEMBL43064	1547484	DB00568
+Eleutherococcus senticosus root extract	NA	Caenorhabditis elegans	N2	250 µg/ml	16	NA	NA	NA	18536978	Mix	NA	NA	NA	NA
+L-Carnitine	Acetyl-L-carnitine	Saccharomyces cerevisiae	BY4741	1 mM	140	NA	NA	NS	20550520	NA	NA	CHEMBL1149	NA	DB00583
+Ethosuximide	NA	Caenorhabditis elegans	N2	4 mg/ml	35	37	NA	NA	15653505	NA	ETHOSUXIMIDE	CHEMBL696	3291	DB00593
+L-deprenyl	NA	Rattus norvegicus	Fischer 344	0.0025	16.7	17	NA	NA	2118586	NA	NA	CHEMBL972	NA	DB01037
+Demeclocycline hydrochloride	NA	Caenorhabditis elegans	NA	33 µM	16	NA	NA	NA	24134630	NA	DEMECLOCYCLINE HYDROCHLORIDE	CHEMBL1200474	NA	DBSALT000040
+Nicardipine hydrochloride	NA	Caenorhabditis elegans	NA	176 µM	23	NA	NA	NA	24134630	NA	NICARDIPINE HYDROCHLORIDE	CHEMBL1200326	49853450, 41114	DBSALT000499
+Bacitracin	NA	Caenorhabditis elegans	N2	0.01	58.5	74	NA	NA	22114686	Peptide	NA	NA	NA	NA
+Green tea extract	NA	Drosophila melanogaster	Oregon R	Instead of water	8.6	NA	Male	NA	8326745	Mix	NA	NA	NA	NA
+Branched-Chain Amino Acids	BCAAs; Branched-Chain Amino Acids	Mus musculus	B6.129S2	1.5 mg/g body weight	12	0	NA	NA	20889128	Peptide	NA	NA	NA	NA
+Simvastatin	NA	Drosophila melanogaster	NA	240 µM	25	NA	NA	NA	22737247	NA	SIMVASTATIN	CHEMBL1064	54454	DB00641
+BRL 15572	NA	Caenorhabditis elegans	NA	33 µM	10	NA	NA	NA	24134630	NA	NA	CHEMBL534232	3654103	NA
+Wortmannin	NA	Drosophila melanogaster	Canton S	5 µM	5	NA	Male	NA	24096697	NA	WORTMANNIN	CHEMBL428496	312145	DB08059
+Sevelamer	NA	Drosophila melanogaster	yw	1%	16	NA	Male	NA	22942172	NA	SEVELAMER	CHEMBL1201798	3085017	DB00658
+Thioridazine hydrochloride	NA	Caenorhabditis elegans	NA	33µM	31	NA	NA	NA	24134630	NA	THIORIDAZINE HYDROCHLORIDE	CHEMBL1200916	657213, 66062	DBSALT000503
+Myxothiazol	NA	Caenorhabditis elegans	N2	NA	32	28.6	NA	NA	18221415	NA	MYXOTHIAZOL	CHEMBL454568	10972974	DB04741
+Ethanol	NA	Caenorhabditis elegans	N2	4 mM	111.9	NA	NA	NA	22279556	NA	NA	CHEMBL545	NA	DB00898
+AG-490	NA	Drosophila melanogaster	Oregon R	300 µM	17.5	NA	NA	NA	22363408	NA	NA	CHEMBL56543	NA	NA
+Blueberry extract	NA	Drosophila melanogaster	NA	5 mg/ml	10	NA	NA	NA	22197903	Mix	NA	NA	NA	NA
+Cortisone	NA	Asplanchna brightwelli	clone 4B61	400 µM	-3.2	0	NA	NS	2782995	NA	CORTISONE	CHEMBL111861	5867	DB14681
+Phenformin	NA	Mus musculus	C3H/Sn	2 mg, 5 times a week	21	26	Female	NA	14618027	NA	PHENFORMIN	CHEMBL170988	8249	DB00914
+Salicylic acid	NA	Caenorhabditis elegans	N2	1 µM	13.9	NA	NA	NA	22866967	NA	SALICYLIC ACID	CHEMBL424	118212070, 338	DB00936, DB01398
+C60	Fullerene	Rattus norvegicus	NA	1.7 mg/kg of body weight	90	NA	NA	NA	22498298	NA	NA	NA	123591	NA
+Aspirin	NA	Mus musculus	UM-HET3	2.5g /kg food	8	0	Male	NA	18631321	NA	ASPIRIN	CHEMBL25	2244	DB00945
+3,5-dihydroxy-4Í-ethyl-trans-stilbene	3,5-hydroxy-4Í-ethyl-stilbene	Saccharomyces cerevisiae	PSY316AT_	10 µM	51.5	NA	NA	NA	17156081	NA	NA	NA	6439521	NA
+Crude BB extract (Vaccinium angustifolium)	NA	Caenorhabditis elegans	fem-1(hc17)	1.5 mg/mL	37	NA	NA	NA	16441844	Mix	NA	NA	NA	NA
+Sorbitol	D-sorbitol; Glucitol	Saccharomyces cerevisiae	PSY316	1 M	29.9	NA	NA	NA	12391171	NA	SORBITOL	CHEMBL1682	5780	DB01638, DB09391
+Minocycline	NA	Drosophila melanogaster	Oregon	0.05 mM	49	NA	Male	NA	22330257	NA	MINOCYCLINE	CHEMBL1434	NA	DB01017
+Guanfacine hydrochloride	NA	Caenorhabditis elegans	NA	13 µM	15	NA	NA	NA	24134630	NA	GUANFACINE HYDROCHLORIDE	CHEMBL1200494	71401, 60204077	DBSALT000509
+Fenofibrate	NA	Caenorhabditis elegans	N2	10 µm	19	NA	NA	NA	23603800	NA	FENOFIBRATE	CHEMBL672	3339	DB01039, DB09545
+BTCP hydrochloride	NA	Caenorhabditis elegans	NA	88 µM	14	NA	NA	NA	24134630	NA	NA	CHEMBL1255586	NA	NA
+Turmeric powder	Curcuma longa	Drosophila melanogaster	NA	5 g/L	17.6	NA	NA	NA	24967413	Mix	NA	NA	NA	NA
+Rifampicin	NA	Caenorhabditis elegans	N2	5 µM	42.6	NA	NA	NA	25720500	NA	NA	CHEMBL374478	NA	DB01045
+Agmatine	NA	Caenorhabditis elegans	N2	100 µM	1	NA	NA	NS	25643626	NA	AGMATINE	CHEMBL58343	199	DB08838
+Nitrendipine	NA	Caenorhabditis elegans	NA	88 µM	25	NA	NA	NA	24134630	NA	NITRENDIPINE	CHEMBL475534	4507	DB01054
+Trolox	6-hydroxy-2,5,7, 8-tetramethylchroman-2-carboxylic acid	Caenorhabditis elegans	N2	3 mM	31	NA	NA	NA	18755260	NA	TROLOX	CHEMBL153	40634	NA
+Promethazine hydrochloride	NA	Caenorhabditis elegans	NA	176 µM	32	NA	NA	NA	24134630	NA	PROMETHAZINE HYDROCHLORIDE	CHEMBL1200750	6014, 89044377, 657263, 517306	DBSALT000427
+Chlorprothixene hydrochloride	NA	Caenorhabditis elegans	NA	13µM	33	NA	NA	NA	24134630	NA	CHLORPROTHIXENE HYDROCHLORIDE	CHEMBL1256658	5282478, 74765286	NA
+Pergolide methanesulfonate	NA	Caenorhabditis elegans	NA	13 µM	37	NA	NA	NA	24134630	NA	NA	CHEMBL1275	NA	DB01186
+Acetic Acid	NA	Caenorhabditis elegans	N2	50 ppm	23	NA	NA	NA	19837596	NA	ACETIC ACID	CHEMBL539	21980959, 176	DB03166, DB04184
+Curare	NA	Asplanchna brightwelli	NA	0.00%	-24	NA	NA	NA	3833547	NA	NA	CHEMBL292280	NA	NA
+Oxaloacetate	Oxaloacetic acid	Caenorhabditis elegans	N2	8 mM	25	13	NA	NA	19793063	NA	OXALOACETATE	CHEMBL1794791	970	NA
+D-glucosamine	NA	Saccharomyces cerevisiae	W303R	0.5 mg/ml	0	NA	NA	NS	11805047	NA	NA	CHEMBL493287	NA	DB01296
+Genistein	NA	Caenorhabditis elegans	N2	50 µM	10	NA	NA	NA	25593647	NA	GENISTEIN	CHEMBL44	5280961	DB01645
+Tocotrienol	vitamin E; alpha-tocophero; alpha-tocotrienol; gamma-tocotrienol; and sigma-tocotrienol	Caenorhabditis elegans	N2	8 ug/ml	8.7	NA	NA	NA	10843344	NA	NA	CHEMBL120643	NA	DB12647
+Everolimus	NA	Drosophila melanogaster	Oregon R	3 mM	16.6	NA	NA	NA	22363408	NA	EVEROLIMUS	CHEMBL1908360	6442177	DB01590
+Apple peel	NA	Saccharomyces cerevisiae	MCY4/KlLSM4::kanMX4	1 gr	28.5	NA	NA	NS	22970337	Mix	NA	NA	NA	NA
+Whole apple extract	NA	Caenorhabditis elegans	N2	10 mg/ml	39	25	NA	NA	23878618	Mix	NA	NA	NA	NA
+Echinacea purpurea root	NA	Mus musculus	BALB/cByJ	2 mg/day	NA	28	Male	NA	16041619	Mix	ECHINACEA PURPUREA ROOT	NA	NA	NA
+SP600125	NA	Drosophila melanogaster	Oregon R	10 mM	23.5	NA	NA	NA	22363408	NA	NA	CHEMBL7064	8515	DB01782
+Ascr#3	hydroxy ketone ascaroside	Caenorhabditis elegans	N2	400 nM	21	NA	NA	NA	23509272	NA	NA	CHEMBL1221889	16066476	NA
+Phosphoenolpyruvate	NA	Caenorhabditis elegans	N2	1 mM	12	NA	NA	NA	25643626	NA	PHOSPHOENOLPYRUVATE	CHEMBL1235228	1005, 59658623, 58114173	DB01819
+EUK-8	NA	Caenorhabditis elegans	N2	10 mM	29	NA	NA	NA	10968795	NA	NA	NA	171249	NA
+Matairesinol	NA	Caenorhabditis elegans	N2	10 uM	14	NA	NA	NA	26141518	NA	MATAIRESINOL	CHEMBL425148	119205	DB04200
+Specioside	NA	Caenorhabditis elegans	N2	50 uM	11.8	NA	NA	NA	25619942	NA	SPECIOSIDE	CHEMBL2332355	11948661	NA
+Damnacanthus officinarum root extract	NA	Caenorhabditis elegans	N2	1200 µg/mL	30.3	NA	NA	NA	22370553	Mix	NA	NA	NA	NA
+Taurine	NA	Caenorhabditis elegans	N2	1 mM	11	NA	NA	NA	25643626	NA	TAURINE	CHEMBL239243	1123, 4068592	DB01956, DB11103
+Rasayana	NA	Drosophila melanogaster	Oregon-K	1 drop	51.1	NA	Female	NA	21836798	Mix	NA	NA	NA	NA
+Apple polyphenols	NA	Caenorhabditis elegans	N2	100 µg/ml	12	NA	NA	NA	20717869	Mix	NA	NA	NA	NA
+Staurosporine	NA	Drosophila melanogaster	Oregon R	30-50 µM	34.8	NA	NA	NA	22363408	NA	STAUROSPORINE	CHEMBL388978	44259	DB02010
+Quercetin dihydrate	NA	Drosophila melanogaster	Oregon R	1 mM	23	NA	NA	NA	22363408	NA	QUERCETIN DIHYDRATE	CHEMBL1173475	16212154	NA
+N-(3-(aminomethyl)benzyl)acetamidine	NA	Drosophila melanogaster	Canton S	0.03 µ_	3	13	Male	NA	24096697	NA	NA	CHEMBL107251	NA	DB02044
+Dichloroacetate	NA	Caenorhabditis elegans	N2	50 µg/ml	7.9	13.5	NA	NA	21153705	NA	NA	NA	25975	DB08809
+N-butanol	NA	Caenorhabditis elegans	N2	4 mM	108.1	NA	NA	NA	22279556	NA	NA	CHEMBL14245	NA	DB02145
+Taxifolin	NA	Caenorhabditis elegans	N2	820 µM	51	NA	NA	NA	18755260	NA	TAXIFOLIN	CHEMBL337309	471	DB02224
+7-cyclopentyl-5-(4-phenoxy)phenyl-7H-pyrrolo[2,3-d]pyrimidin-4-ylamine	NA	Caenorhabditis elegans	NA	33 µM	11	NA	NA	NA	24134630	NA	NA	CHEMBL47940	6603792	NA
+Myricetin	NA	Caenorhabditis elegans	N2	100 µM	32.9	NA	NA	NA	23736695	NA	MYRICETIN	CHEMBL164	5281672	DB02375
+DhHP-6	Deuterohemin-AlaHisThrValGluLys	Caenorhabditis elegans	N2	200 µM	21	NA	NA	NA	20528576	Peptide	NA	NA	NA	NA
+Geldanamycin	NA	Caenorhabditis elegans	N2	20 µM	2	NA	NA	NA	26676933	NA	GELDANAMYCIN	CHEMBL278315	5288382	DB02424
+Recombinant buckwheat trypsin inhibitor	NA	Caenorhabditis elegans	N2	5 uM	15.6	NA	NA	NA	25959406	Peptide	NA	NA	NA	NA
+Pyrrolidine dithiocarbamate	NA	Drosophila melanogaster	NA	20 mg/l	16	NA	Female	NA	21483034	NA	PYRROLIDINE DITHIOCARBAMATE	CHEMBL399491	65351	NA
+D-aspartate	NA	Caenorhabditis elegans	N2	1 mM	7	NA	NA	NS	25643626	NA	D-ASPARTATE	CHEMBL29757	83887	DB02655
+LY-367,265	NA	Caenorhabditis elegans	NA	33µM	34	NA	NA	NA	24134630	NA	NA	CHEMBL1079460	NA	NA
+Putrescine	NA	Caenorhabditis elegans	N2	1 mM	10	NA	NA	NA	25643626	NA	PUTRESCINE	CHEMBL46257	1045	DB01917
+LY-294002	NA	Drosophila melanogaster	Canton S	5 µM	14	22.5	Male	NA	20017609	NA	LY-294002	CHEMBL98350	3973	DB02656
+Huanshao dan	HSh	Caenorhabditis elegans	N2	6.8 g/L	38.3	NA	NA	NA	24952637	Mix	NA	NA	NA	NA
+Clofibrate	NA	Caenorhabditis elegans	N2	10 µm	16	NA	NA	NA	23603800	NA	CLOFIBRATE	CHEMBL565	2796	DB00636
+Resveratrol	NA	Saccharomyces cerevisiae	PSY316AT MAT_	10 µM	60.7	NA	NA	NA	12939617	NA	RESVERATROL	CHEMBL165	445154	DB02709
+Pregnenolone	PREG	Caenorhabditis elegans	N2	60 µg/mL	20	NA	NA	NA	17266678	NA	PREGNENOLONE	CHEMBL253363	8955	DB02789
+Bezafibrate	NA	Caenorhabditis elegans	N2	10 µm	13	NA	NA	NA	23603800	NA	BEZAFIBRATE	CHEMBL264374	39042	DB01393
+Methylergonovine maleate	NA	Caenorhabditis elegans	NA	88µM	28	NA	NA	NA	24134630	NA	METHYLERGONOVINE MALEATE	CHEMBL1200843	5281072	DBSALT001025
+Alpha-ketoglutarate	NA	Caenorhabditis elegans	N2	8 mM	29.4	NA	NA	NA	24828042	NA	NA	CHEMBL1686	NA	DB02926, DB03806
+Beta-alanine	NA	Caenorhabditis elegans	N2	1 mM	13	NA	NA	NA	25643626	NA	BETA-ALANINE	CHEMBL297569	4755801, 239	DB03107
+L-histidine methyl ester	NA	Caenorhabditis elegans	N2	100 µM	8	NA	NA	NA	25643626	NA	NA	CHEMBL54664	NA	NA
+Ivabradine	NA	Mus musculus	C57BL/6J	50 mg/kg/day	6.2	NA	Male	NA	25589054	NA	IVABRADINE	CHEMBL471737	132999	DB09083
+Cysteine	NA	Caenorhabditis elegans	N2	1 mM	9	NA	NA	NA	25643626	NA	CYSTEINE	CHEMBL863, CHEMBL54943	NA	DB00151, DB04443, DB09485
+Spermidine	NA	Drosophila melanogaster	w1118	1 mM	30	NA	NA	NA	19801973	NA	SPERMIDINE	CHEMBL19612	1102	DB03566
+N-propanol	NA	Caenorhabditis elegans	N2	4 mM	95.5	NA	NA	NA	22279556	NA	NA	CHEMBL14687	NA	DB03175
+Pomegranate juice	NA	Drosophila melanogaster	Canton S	0.1	8	NA	Female	NA	25566518	Mix	NA	NA	NA	NA
+Rotenone	NA	Caenorhabditis elegans	N2	100 nM	10	NA	Hermaphrodite	NA	24199155	NA	ROTENONE	CHEMBL429023	6758	DB11457
+Quercetin	NA	Caenorhabditis elegans	N2	100 µM	19	15	NA	NA	18024103	NA	QUERCETIN	CHEMBL50	5280343	DB04216
+D-glycerol	NA	Saccharomyces cerevisiae	PSY316	1 M	49.8	NA	NA	NA	12391171	NA	NA	CHEMBL692	NA	DB09462
+Fumarate	NA	Caenorhabditis elegans	N2	10 mM	16	NA	NA	NA	23472183	NA	NA	NA	5460307	NA
+Beta-Estradiol	NA	Caenorhabditis elegans	NA	33 µM	7	NA	NA	NA	24134630	NA	NA	CHEMBL135	NA	DB00783
+Citrate	Sodium citrate; Citric acid	Mytilina brevispina	NA	0.25% on alternate days	51.7	NA	NA	NA	804507	NA	Citric acid	CHEMBL1261	311	DB04272
+Beta-caryophyllene	NA	Caenorhabditis elegans	N2	25 uM	11.2	NA	NA	NA	24835194	NA	BETA-CARYOPHYLLENE	CHEMBL445740	5281515	NA
+Trichostatin A	NA	Drosophila melanogaster	Canton S	10 µM	23.3	37	Male	NA	15346199	NA	NA	CHEMBL99	NA	DB04297
+Panax notoginseng main root polysaccharide	NA	Caenorhabditis elegans	N2	0.1 mg/ml	21	NA	NA	NA	26234580	Mix	NA	NA	NA	NA
+Allantoin	NA	Caenorhabditis elegans	N2	250 µM	21.9	NA	NA	NA	26676933	NA	ALLANTOIN	CHEMBL593429	204	DB11100
+Lactic acid	NA	Drosophila melanogaster	Oregon R	1M	-32.7	NA	Male	NA	110607	NA	LACTIC ACID	CHEMBL1200559	612, 19789253	DB04398, DB09294
+Homocysteine	NA	Caenorhabditis elegans	N2	5 mM	7	NA	NA	NA	25643626	NA	HOMOCYSTEINE	CHEMBL310604	778, 49791978	DB04422
+Shengmai yin	SM	Caenorhabditis elegans	N2	48.0 g/L	47.3	NA	NA	NA	24952637	Mix	NA	NA	NA	NA
+N-nitrosodimethylamine	NA	Caenorhabditis elegans	N2	50 µM	5.5	NA	NA	NA	25556763	NA	N-NITROSODIMETHYLAMINE	CHEMBL117311	6124	NA
+Omega-6	_-6  Polyunsaturated fatty acids; Omega-6 PUFAs; Omega-6 Fatty Acid	Caenorhabditis elegans	N2	10 µM	16	NA	NA	NA	23392608	NA	NA	NA	56842208	NA
+2,4-dinitrophenol	DNP	Drosophila melanogaster	Oregon R	0.008	20.2	0	NA	NA	16266268	NA	2,4-DINITROPHENOL	CHEMBL273386	1493	DB04528
+Paraquat	N,N_-dimethyl-4,4_-bipyridinium dichloride	Caenorhabditis elegans	N2	0.1 mM	58	48	NA	NA	21151885	NA	PARAQUAT	CHEMBL74469	15939	NA
+Hesperidin	NA	Saccharomyces cerevisiae	BY4741	5 µM	15.4	NA	NA	NA	22484922	NA	HESPERIDIN	CHEMBL449317	10621	DB04703
+Carnosine	NA	Drosophila melanogaster	D-32	200 mg/l	24.3	NA	Male	NA	12447464	NA	NA	CHEMBL242948	NA	DB11695
+Chicoric acid	NA	Caenorhabditis elegans	N2	100 µM	21	8	NA	NA	24244361	NA	CHICORIC ACID	CHEMBL29660	5470299	NA
+Buformin	NA	Rattus norvegicus	LIO	5 mg/day	7	5.5	Female	NA	14618027	NA	BUFORMIN	CHEMBL39736	2468	DB04830
+Vitamin E	D,1-alpha-tocopherol	Caenorhabditis elegans	N2	400 µg/ml	4	NA	NA	NA	3374177	NA	VITAMIN E	CHEMBL47, CHEMBL3989727	NA	DB00163
+EGTA	1,2-di(2 aminoethoxy)ethane tetra-acetic acid	Mytilina brevispina	NA	0.25% on alternate days	75.9	NA	NA	NA	804507	NA	NA	CHEMBL240390	NA	NA
+Nebivolol	NA	Mus musculus	C3B6F1	0.27 g/kg diet	6.4	NA	Male	NA	23314750	NA	NEBIVOLOL	CHEMBL434394	71301	DB04861
+Liuwei dihuang wan	LW	Caenorhabditis elegans	N2	4.2 g/L	12.6	NA	NA	NA	24952637	Mix	NA	NA	NA	NA
+Huperzine A	NA	Caenorhabditis elegans	N2	300 µM	13.8	NA	NA	NA	23523941	NA	HUPERZINE A	CHEMBL1255901	9794806	DB04864, DB01928, DB05510
+Mianserin	NA	Caenorhabditis elegans	N2	50 µM	31	NA	NA	NA	18033297	NA	MIANSERIN	CHEMBL6437	4184	DB06148
+Ginkgo biloba extract	EGb 761	Rattus norvegicus	Fischer 344	50 mg/kg	17.4	NA	Male	NA	9469738	Mix	NA	NA	NA	NA
+DAPH	NA	Caenorhabditis elegans	NA	13 µM	15	NA	NA	NA	24134630	NA	DAPH	CHEMBL268868	1697	NA
+N-acetyl-L-cysteine	NA	Drosophila melanogaster	Oregon R	1 mg/ml	14.1	15.1	Male	NA	9447249	NA	NA	CHEMBL600	NA	DB06151, DB05436
+Polyphenols	NA	Mus musculus	C57BL/6J	NA	6.3	NA	Male	NA	22265987	Mix	NA	NA	NA	NA
+Lonidamine	NA	Caenorhabditis elegans	NA	5 µM	8	8	NA	NA	21932172	NA	LONIDAMINE	CHEMBL1257030	39562	DB06266, DB03762
+Cyproterone acetate	NA	Caenorhabditis elegans	NA	33 µM	23	NA	NA	NA	24134630	NA	CYPROTERONE ACETATE	CHEMBL139835	9880	DB04839
+Astaxanthin	NA	Caenorhabditis elegans	N2	1 mM	28.6	21.7	NA	NA	22013497	NA	ASTAXANTHIN	CHEMBL1255871	5281224	DB06543
+Betaine	Trimethylglycine	Caenorhabditis elegans	N2	1 mM	9	NA	NA	NA	25643626	NA	BETAINE	CHEMBL95889	248	DB06756
+4-phenylbutyrate	PBA	Drosophila melanogaster	Canton S	5 mM	40	41	NA	NA	11792861	NA	NA	CHEMBL1469	NA	DB06819, DB02000, DB12600
+Fisetin	NA	Saccharomyces cerevisiae	PSY316AT MAT_	10 µM	55	NA	NA	NA	12939617	NA	FISETIN	CHEMBL31574	5281614	DB07795
+Tyrphostin 9	NA	Drosophila melanogaster	Oregon R	300-500 µM	17.3	NA	NA	NA	22363408	NA	NA	CHEMBL7917	NA	NA
+Sodium hypophosphite	NA	Zaprionus paravittiger	NA	1 mM	-89.8	-94.9	Female	NA	3721207	NA	SODIUM HYPOPHOSPHITE	CHEMBL2146115	23675242	NA
+D-beta-hydroxybutyrate	D-_HB	Caenorhabditis elegans	N2	20 mM	26	NA	NA	NA	25127866	NA	NA	CHEMBL1162484	NA	NA
+Naphthazarin	NA	Caenorhabditis elegans	N2	100 µM	11	12	NA	NA	21765926	NA	NA	CHEMBL274056	NA	NA
+Trametinib	NA	Drosophila melanogaster	white Dahomey	15.6 µM	12	NA	NA	NA	26119340	NA	TRAMETINIB	CHEMBL2103875	11707110	DB08911
+Acacetin 7-O-alpha-l-rhamnopyranosyl (1_2) beta-D-xylopyranoside	NA	Caenorhabditis elegans	N2	50 µM	17	NA	NA	NA	26433219	NA	NA	NA	5317025	NA
+Melatonin	NA	Mus musculus	BALB/c	NA	18.1	NA	Female	NA	8290600	NA	MELATONIN	CHEMBL45	896	DB01065, DB08189
+Methylene blue	MB	Mus musculus	UM-HET3	27mg/kg diet	0	6	Female	NA	24245565	NA	METHYLENE BLUE	CHEMBL191083, CHEMBL550495	NA	DB09241
+Coenzyme Q10	Q10	Caenorhabditis elegans	N2	50 µg/ml	6	NA	NA	NA	14706236	NA	NA	CHEMBL454801	NA	DB09270
+Tannic acid	NA	Drosophila melanogaster	Oregon R	1 mg/ml	0	NA	Male	NS	8326745	NA	TANNIC ACID	CHEMBL506247	16129778	DB09372
+Xylose	NA	Caenorhabditis elegans	N2	10 mM	6	NA	NA	NA	25643626	NA	XYLOSE	CHEMBL502135	135191	DB09419
+Tartaric acid	NA	Drosophila melanogaster	Oregon R	0.1M	-72	NA	Male	NA	110607	NA	TARTARIC ACID	CHEMBL1200861	439655	DB09459
+Glaucarubinone	NA	Caenorhabditis elegans	N2	100 nM	7.9	9	NA	NA	21264793	NA	GLAUCARUBINONE	CHEMBL458347	441796	NA
+Glycerol	NA	Caenorhabditis elegans	N2	1%	-36	NA	NA	NA	19883616	NA	NA	CHEMBL692	NA	DB09462, DB04077
+Olive Oil	NA	Rattus norvegicus	NA	NA	18	NA	NA	NA	22498298	Mix	OLIVE OIL	NA	NA	NA
+Apple	NA	Saccharomyces cerevisiae	MCY4/KlLSM4::kanMX4	1 gr	78.5	NA	NA	NS	22970337	Mix	NA	NA	NA	NA
+Sesame	NA	Drosophila melanogaster	Oregon R	2 mg/ml	12	NA	Male	NA	23291977	Mix	NA	NA	NA	NA
+Cocoa	Cocoa powder	Drosophila melanogaster	rosy^+5	50 g/l medium	NA	NA	Male	NA	19083435	Mix	COCOA	NA	NA	NA
+Proanthocycanidin	NA	Caenorhabditis elegans	N2	67 µg/ml	36.6	NA	NA	NA	22509764	Mix	NA	NA	NA	NA
+Calcium gluconate	NA	Drosophila melanogaster	Oregon R	0.001 M	-3.7	NA	Male	NA	110607	NA	CALCIUM GLUCONATE	CHEMBL2106119	9290, 10982878	DB11126
+L-Theanine	NA	Caenorhabditis elegans	N2	0.1 µM	3.6	4.4	NA	NA	22422488	NA	NA	CHEMBL3039113	NA	DB12444
+Polydatin	NA	Caenorhabditis elegans	N2	1 mM	30	NA	NA	NA	24305800	NA	NA	CHEMBL142652	NA	DB11263
+Platycladus orientalis seed extract	NA	Caenorhabditis elegans	N2	500 µg/ml	26.5	NA	NA	NA	23523941	Mix	NA	NA	NA	NA
+Dimethyl formamide	DMF	Caenorhabditis elegans	N2	0.0075	33	54	NA	NA	23313473	NA	NA	CHEMBL268291	NA	DB01844
+Curcumin	NA	Drosophila melanogaster	Canton S	100 µM	19	NA	Female	NA	20645870	NA	CURCUMIN	CHEMBL116438	5281767	DB11672
+Galactose	D-galactose	Musca domestica	NA	20 mg/ml	-27.1	-27.1	Male	NA	15547319	NA	GALACTOSE	CHEMBL1233058	439357	DB11735
+Epicatechin	NA	Drosophila melanogaster	Oregon R	0.01 mg/ml	1.8	NA	Male	NS	8326745	NA	NA	CHEMBL583912	NA	DB12039
+Icariin	NA	Caenorhabditis elegans	N2	45 µM	20.7	NA	NA	NA	22216122	NA	ICARIIN	CHEMBL553204	5318997	NA
+Otophylloside B	NA	Caenorhabditis elegans	N2	50 µM	30	NA	NA	NA	26112394	NA	NA	NA	10079485	NA
+Vinpocetine	NA	Caenorhabditis elegans	NA	33µM	15	NA	NA	NA	24134630	NA	VINPOCETINE	CHEMBL71752	443955	DB12131
+3,5-dihydroxy-4Í-acetoxy-trans-stilbene	3,5-hydroxy-4Í-acetoxy-stilbene	Saccharomyces cerevisiae	PSY316AT_	10 µM	68.2	NA	NA	NA	17156081	ID's Not Found	NA	NA	NA	NA
+Trehalose	NA	Caenorhabditis elegans	N2	5 mM	32	NA	NA	NA	20477758	"
+"	TREHALOSE	CHEMBL1236395	7427	DB12310
+Polypeptide Bovine Thymus extract	NA	Mus musculus	C3H/Sn	0.5 mg	28	11.2	Female	NA	6752596	Mix	NA	NA	NA	NA
+Indirubin	NA	Drosophila melanogaster	Oregon R	3 mM	8.2	NA	NA	NA	22363408	NA	INDIRUBIN	CHEMBL1276127	5318433	DB12379
+L-theanine	Theanine	Caenorhabditis elegans	N2	100 µM	14	NA	NA	NA	25643626	NA	NA	CHEMBL3039113	NA	DB12444
+Propyl gallate	NA	Zaprionus paravittiger	NA	25 µg/ml	8.7	15.3	Female	NA	8950031	NA	PROPYL GALLATE	CHEMBL7983	4947	DB12450
+Sodium pyruvate	Pyruvic acid	Caenorhabditis elegans	N2	2.5 mM	13.9	NA	NA	NA	21040400	NA	NA	CHEMBL181886	NA	DBSALT001546
+Eliprodil	NA	Caenorhabditis elegans	NA	88 µM	16	NA	NA	NA	24134630	NA	ELIPRODIL	CHEMBL28564	60703	DB12869
+D-alanine	NA	Caenorhabditis elegans	N2	10 mM	16	NA	NA	NA	25643626	NA	D-ALANINE	CHEMBL66693	71080, 7311725	DB01786
+Oxatomide	NA	Caenorhabditis elegans	NA	88 µM	25	NA	NA	NA	24134630	NA	OXATOMIDE	CHEMBL13828	4615, 1385580	DB12877
+1-methyl nicotinamide	NA	Caenorhabditis elegans	N2	1 µM	7.7	11	NA	NA	24077178	NA	NA	CHEMBL71733	NA	DB11710
+Quinidine sulfate	NA	Caenorhabditis elegans	NA	33 µM	12	NA	NA	NA	24134630	NA	QUINIDINE SULFATE	CHEMBL3707183	656862	DBSALT000363
+Pinitol	NA	Drosophila melanogaster	Canton S	NA	12.5	NA	Female	NA	22843669	NA	PINITOL	CHEMBL493737	NA	DB12969
+Ferulsinaic acid	NA	Caenorhabditis elegans	N2	100 µm	20	NA	NA	NA	21749391	NA	NA	NA	102469382	NA
+Inositol	NA	Caenorhabditis elegans	N2	1 mM	3	NA	NA	NA	25643626	NA	INOSITOL	CHEMBL1222251	892	DB13178, DB11196
+Plumbagin	NA	Caenorhabditis elegans	N2	1 µM	1	3	NA	NS	21765926	NA	PLUMBAGIN	CHEMBL295316	10205	NA
+Nordihydroguaiaretic acid	NDGA	Aedes aegypti	NA	0.001% (w/v)	42.7	NA	Female	NA	3749035	NA	NORDIHYDROGUAIARETIC ACID	CHEMBL52	4534	DB00179, DB05900
+Calcium lactate	NA	Drosophila melanogaster	Oregon R	0.01 M	-10.7	NA	Male	NA	110607	NA	CALCIUM LACTATE	CHEMBL2106111	521805, 13144	DB13231
+Metergoline	NA	Caenorhabditis elegans	NA	33µM	23	NA	NA	NA	24134630	NA	METERGOLINE	CHEMBL19215	28693	DB13520
+3,4-dichloroisocoumarin	NA	Caenorhabditis elegans	NA	88 µM	13	NA	NA	NA	24134630	NA	NA	CHEMBL24983	NA	DB04459
+Fish oil	NA	Caenorhabditis elegans	N2	2 mg/plate	-12.8	NA	NA	NA	23526170	Mix	FISH OIL	NA	NA	NA
+Catechin	NA	Drosophila melanogaster	Oregon R	0.1 mg/ml	-8.5	NA	Male	NS	8326745	NA	CATECHIN	CHEMBL206452	1203	DB14086
+Nicotinamide adenine dinucleotide	NAD	Caenorhabditis elegans	N2	100 µM	15	NA	NA	NA	19370397	NA	NA	CHEMBL1234613	NA	DB14128
+Royal Jelly	NA	Mus musculus	C3H/HeJ	500 ppm ad libitum in diet	23.6	NA	Male	NA	12954483	Mix	NA	NA	NA	NA
+Edetate Calcium Disodium	ethylene diamine tetra-acetic acid (di-sodium salt); EDTA	Mytilina brevispina	NA	0.25% on alternate days	49.4	NA	NA	NA	804507	NA	EDETATE CALCIUM DISODIUM	CHEMBL1200375, CHEMBL3989522	NA	DB14598, DBSALT000837
+Picolinic acid	NA	Caenorhabditis elegans	N2	1 mM	7	NA	NA	NA	25643626	NA	NA	CHEMBL72628	NA	NA
+Tyrphostin 1	NA	Drosophila melanogaster	Oregon R	100-300 µM	19	NA	NA	NA	22363408	NA	TYRPHOSTIN 1	CHEMBL77456	2063	NA
+Aurintricarboxylic acid	ATA	Drosophila melanogaster	Oregon R	0.5 mM	15	0	Male	NA	15621204	NA	AURINTRICARBOXYLIC ACID	CHEMBL275938	2259	NA
+Juglone	5-hydroxy-1,4-naphthalenedione	Caenorhabditis elegans	N2	40µm	29	NA	NA	NA	19597959	NA	JUGLONE	CHEMBL43612	3806	NA
+Kenpaullone	NA	Caenorhabditis elegans	NA	88 µM	27	NA	NA	NA	24134630	NA	KENPAULLONE	CHEMBL296586	3820	NA
+Diiodomethane	Methylene iodide	Drosophila melanogaster	NA	10 µg/ml	29.3	NA	NA	NA	412727	NA	Diiodomethane	NA	6346	NA
+Lithocholic acid	NA	Saccharomyces cerevisiae	BY4741	50 µM	100	NA	NA	NA	20622262	NA	LITHOCHOLIC ACID	CHEMBL1478	9903	NA
+Tyrosol	NA	Caenorhabditis elegans	fer-15(b26)	250 µM	19.1	10.8	NA	NA	22824366	NA	TYROSOL	CHEMBL53566	10393	NA
+Dibromoacetic acid	NA	Caenorhabditis elegans	N2	100 µm	14.6	NA	NA	NA	25556763	NA	DIBROMOACETIC ACID	CHEMBL449362	12433	NA
+D-glutamate	NA	Caenorhabditis elegans	N2	10 mM	-3	NA	NA	NS	25643626	NA	D-GLUTAMATE	CHEMBL76232	23327	DB02517
+Arctigenin	NA	Caenorhabditis elegans	N2	10 uM	6.7	NA	NA	NA	26141518	NA	ARCTIGENIN	CHEMBL435734	64981	NA
+Sesamin	NA	Caenorhabditis elegans	N2	3.1 µg	10.5	NA	NA	NA	24549958	NA	SESAMIN	CHEMBL252915	72307	NA
+Arctiin	NA	Caenorhabditis elegans	N2	10 uM	8.9	NA	NA	NA	26141518	NA	ARCTIIN	CHEMBL388452	100528	NA
+Celastrol	NA	Caenorhabditis elegans	N2	7 µmol/l	17.4	NA	NA	NA	24416295	NA	CELASTROL	CHEMBL301982	122724	NA
+Tetrahydrocurcumin	NA	Mus musculus	Sprague-Dawley	0.002	11.7	NA	Male	NA	15247057	NA	TETRAHYDROCURCUMIN	CHEMBL318743	124072	NA
+Ketanserin tartrate	NA	Caenorhabditis elegans	NA	176 µM	13	NA	NA	NA	24134630	NA	KETANSERIN TARTRATE	CHEMBL1256709	135348	NA
+Glyceollin I	NA	Saccharomyces cerevisiae	NA	12.5 nM	40	NA	NA	NA	24399048	NA	GLYCEOLLIN I	CHEMBL1774987	162807	NA
+Nicotinamide riboside	NR	Saccharomyces cerevisiae	BY4741	10 µM	20	NA	NA	NS	17482543	NA	NICOTINAMIDE RIBOSIDE	CHEMBL438497	439924	NA
+Tartrate	Sodium tartrate	Mytilina brevispina	NA	0.25% on alternate days	43.7	NA	NA	NA	804507	NA	TARTRATE	CHEMBL1236315	444305	NA
+Sodium butyrate	NA	Drosophila melanogaster	Ra	10 mM	-9.1	NA	NA	NS	23044027	NA	SODIUM BUTYRATE	CHEMBL62381	5222465	NA
+Baicalein	5,6,7-trihydroxyflavone	Caenorhabditis elegans	N2	0.001	36.7	52	NA	NA	22114686	NA	BAICALEIN	CHEMBL8260	5281605	NA
+Tamarixetin	NA	Caenorhabditis elegans	NA	NA	28	NA	NA	NA	16872777	NA	TAMARIXETIN	CHEMBL226034	5281699	NA
+Rosmarinic acid	NA	Caenorhabditis elegans	N2	200 µM	10	NA	NA	NA	21503726	NA	ROSMARINIC ACID	CHEMBL324842	5281792	NA
+Piericidin A	NA	Caenorhabditis elegans	N2	100 nM	5	NA	NA	NA	24199155	NA	PIERICIDIN A	CHEMBL272733	6437838	NA
+Myriocin	NA	Saccharomyces cerevisiae	BY4741	600 ng/ml	NA	NA	NA	NA	23725375	NA	MYRIOCIN	CHEMBL55076	6438394	NA
+Naftopidil dihydrochloride	NA	Caenorhabditis elegans	NA	33 µM	14	NA	NA	NA	24134630	NA	NAFTOPIDIL DIHYDROCHLORIDE	CHEMBL1257069	6603044	NA
+Verminoside	NA	Caenorhabditis elegans	N2	50 uM	8.5	NA	NA	NA	26189547	NA	VERMINOSIDE	CHEMBL462888	11948660	NA
+Fucoxanthin	NA	Caenorhabditis elegans	N2	5 µM	14	24	NA	NA	26292053	NA	FUCOXANTHIN	CHEMBL1773903	54585187	NA
+Thioflavin T	(4-(3,6-dimethyl-1,3-benzothiazol-3-ium-2- yl)-N,N-dimethylaniline chloride)	Caenorhabditis elegans	N2	50-100µM	60	78	NA	NA	21451522	NA	THIOFLAVIN T	CHEMBL224392	16953, 622721	NA
+Propionylpromazine hydrochloride	NA	Caenorhabditis elegans	NA	33 µM	20	NA	NA	NA	24134630	NA	PROPIONYLPROMAZINE HYDROCHLORIDE	CHEMBL1256661	50986740, 24351	NA
+Amperozide hydrochloride	NA	Caenorhabditis elegans	NA	13 µM	38	NA	NA	NA	24134630	NA	AMPEROZIDE HYDROCHLORIDE	CHEMBL1257106	73334, 50986842	NA
+Polypeptide Pineal extract	PPE	Rattus norvegicus	NA	0.5 mg, 5 times a week	25	NA	Female	NA	575333	Mix	Organ extract, not a compound	NA	NA	NA
+Thiazolidine carboxylic acid	TCA	Drosophila melanogaster	Oregon R	0.3% wt/vol	31	NA	NA	NA	6821144	NA	NA	CHEMBL3245365	NA	NA
+Black tea extract	NA	Drosophila melanogaster	Oregon R	Instead of water	20.2	NA	Male	NA	8326745	Mix	NA	NA	NA	NA
+Tea (Camellia sinensis) extract	NA	Drosophila melanogaster	Oregon R	Instead of water	15.7	NA	Male	NA	8326745	Mix	NA	NA	NA	NA
+Butylated hydroxyanisole	BHA	Zaprionus paravittiger	NA	100 mM	-63.8	-53.7	Male	NA	9207858	NA	BUTYLATED HYDROXYANISOLE	CHEMBL192451, CHEMBL502074	8456	NA
+Epithalamin	Pineal peptide Preparation	Mus musculus	C3H/Sn	NA	31	NA	NA	NA	9701766	NA	NA	NA	219042	NA
+Rhodiola rosea extract	NA	Drosophila melanogaster	NA	30 mg/mL every other day	NA	42.9	Male	NA	9825229	Mix	NA	NA	NA	NA
+EUK-134	NA	Caenorhabditis elegans	N2	0.05 mM	29	NA	NA	NA	10968795	NA	NA	NA	9823233	NA
+Epitalon	Ala-Glu-Asp-Gly	Drosophila melanogaster	Canton S	5*10^-6 %	3.2	NA	Female	NS	11087911	NA	NA	NA	219042	NA
+L-Glu-L-Trp dipeptide	NA	Rattus norvegicus	NA	5 µg/rat. 5 times a week	0	10.4	Female	NA	11707921	Peptide	NA	NA	NA	NA
+Green tea polyphenols	NA	Mus musculus	Sprague-Dawley	80 mg/L	6.4	NA	Male	NA	15247057	Mix	NA	NA	NA	NA
+3,3'-thiodipropionic acid	TDPA	Asplanchna brightwelli	clone 4B61	2 mM	10	0	NA	NA	15374519	NA	NA	CHEMBL1569439	NA	NA
+3,3-diethyl-2-pyrrolidinone	DEABL	Caenorhabditis elegans	N2	2 mg/ml	31	49	NA	NA	15653505	NA	NA	CHEMBL293075	NA	NA
+Dauer-inducing Pheromone	NA	Caenorhabditis elegans	N2	5% in food	13.3	NA	NA	NA	16377915	NA	NA	NA	11471380	NA
+3,5-dihydroxy-4Í-thiomethyl-trans-stilbene	3,5-hydroxy-4Í-thiomethyl-stilbene	Saccharomyces cerevisiae	PSY316AT_	10 µM	22.7	NA	NA	NA	17156081	ID's Not Found	NA	NA	NA	NA
+Epigallocatechin-3-gallate	EGCG	Caenorhabditis elegans	N2	25 µM	4.8	4.8	NA	NS	17156833	NA	NA	CHEMBL297453	NA	DB12116
+Gamma-tocopherol	NA	Caenorhabditis elegans	fem-1(hc17)	20 ug/ml	17	NA	NA	NA	17169403	NA	NA	CHEMBL2151591	NA	NA
+4-dafachronic acid	NA	Caenorhabditis elegans	N2	250 nM	0	2.6	NA	NA	17360327	NA	NA	CHEMBL1232254, CHEMBL2387006	42628074, 16734910	NA
+Rhodiola rosea	NA	Drosophila melanogaster	NA	30 mg/mL	11.9	NA	Female	NA	17990971	Mix	NA	NA	NA	NA
+Hydrogen Sulphide	NA	Caenorhabditis elegans	N2	50ppm	74	NA	NA	NA	18077331	NA	NA	CHEMBL1200739	NA	NA
+Acticoa powder	Cocoa polyphenolic extract	Rattus norvegicus	Wistar-Unilever	24 mg/5 ml/kg	11	NA	NA	NA	18179729	Mix	NA	NA	NA	NA
+FCCP	Carbonyl cyanide-4-(trifluoromethoxy)phenylhydrazone	Caenorhabditis elegans	N2	NA	28	21.4	NA	NA	18221415	NA	NA	CHEMBL457504	NA	NA
+Rhodiola rosea root extract	NA	Caenorhabditis elegans	N2	10 µg/ml	15	NA	NA	NA	18536978	Mix	NA	NA	NA	NA
+SkQ1	10-(6'-plastoquinonyl) decyltriphenylphosphonium	Drosophila melanogaster	NA	20pM-20nM	114	NA	Female	NA	19120018	NA	NA	NA	16679091	NA
+Pine Bark extract	NA	Caenorhabditis elegans	N2	10 µg/mL	NA	5.2	NA	NA	19350411	Mix	NA	NA	NA	NA
+Psoralea corylifolia extract	NA	Caenorhabditis elegans	N2	10 µg/mL	NA	9.8	NA	NA	19350411	Mix	NA	NA	NA	NA
+Carbonylcyanide-3-chlorophenylhydrazone	CCCP	Caenorhabditis elegans	N2	10µm	60	NA	NA	NA	19442682	NA	NA	CHEMBL224214	2603	NA
+Black tea extract	NA	Drosophila melanogaster	NA	10 mg/ml	10	NA	NA	NA	19770032	Mix	NA	NA	NA	NA
+Reishi polysaccharide	Ganoderma lucidum polysaccharide	Caenorhabditis elegans	N2	100 ppm	35	NA	NA	NA	19837596	Mix	NA	NA	NA	NA
+SQDB	Shi Quan Da Bu Tang Herbal Formula	Caenorhabditis elegans	N2	100 µg/ml	12	NA	NA	NA	20179756	Mix	NA	NA	NA	NA
+VI-28	NA	Mus musculus	C57BL/6J	0.005	7.2	NA	Female	NS	20370440	Mix	NA	NA	NA	NA
+Indolepropionamide	IPAM	Philodina acuticornis	odiosa	10 µM	137.8	NA	NA	NA	20421998	NA	NA	NA	21703095	NA
+Phaseolus vulgaris Extract	NA	Caenorhabditis elegans	N2	150 µg / mL	13.2	NA	NA	NA	20455573	Mix	NA	NA	NA	NA
+Marine collagen peptides	MCPs	Rattus norvegicus	Sprague-Dawley	0.09	11	13	NA	NA	20553190	Mix	NA	NA	NA	NA
+S,S-trolox-carnosine	STC	Drosophila melanogaster	NA	50 mg/L	16	NA	Male	NA	20681748	NA	NA	NA	129843828	NA
+Procyanidins	NA	Caenorhabditis elegans	N2	65 µg/ml	12.1	NA	NA	NA	20717869	NA	NA	NA	107876	NA
+Stachys lavandulifolia ethanol extract	NA	Drosophila melanogaster	Oregon R	4 ul/100 ml media	12.4	6.4	Male	NA	20738162	Mix	NA	NA	NA	NA
+Stachys lavandulifolia water extract	NA	Drosophila melanogaster	Oregon R	12 ul/100 ml media	21.9	8	Female	NA	20738162	Mix	NA	NA	NA	NA
+Diallyl trisulfide	DATS	Caenorhabditis elegans	TJ1060	10 µM	13	NA	NA	NA	21296648	NA	NA	CHEMBL123040	NA	NA
+Oregano and Cranberry extracts	NA	Anastrepha ludens	Loew	0.02	43	NA	NA	NA	21455602	Mix	NA	NA	NA	NA
+Caffeic acid	NA	Caenorhabditis elegans	N2	300 µM	11	NA	NA	NA	21503726	NA	NA	CHEMBL145	NA	DB01880
+Q3'G	quercetin 3'-O-beta-D-glucopyranoside	Caenorhabditis elegans	N2	21 µg/mL	12	NA	NA	NA	21563825	NA	NA	CHEMBL250450	5280804	DB12665
+Q3M	3-O-beta-D-glucopyranoside-(4-1)-beta-D-glucopyranoside	Caenorhabditis elegans	N2	20 µg/mL	20	NA	NA	NA	21563825	Mix	NA	NA	NA	NA
+Oxoline	NA	Caenorhabditis elegans	N2	1 mM	13	18	NA	NA	21765926	NA	NA	NA	169137	NA
+Protease treated royal jelly	Royalactin	Caenorhabditis elegans	N2	10 µg/ml	18	44	NA	NA	21858156	Mix	NA	NA	NA	NA
+Astragalus membranaceus polysaccharide	Astragalan	Caenorhabditis elegans	N2	1-2.5 mg/ml	23.8	NA	NA	NA	21892924	Mix	NA	NA	NA	NA
+Rosa damascena extract	NA	Drosophila melanogaster	B	NA	22.4	12.7	Male	NA	21928072	Mix	NA	NA	NA	NA
+Dafadine-A	NA	Caenorhabditis elegans	N2	50 µM	29	NA	NA	NA	22057127	NA	NA	CHEMBL1585869	NA	NA
+SB203580	NA	Drosophila melanogaster	Oregon R	300 µM	30.3	NA	NA	NA	22363408	NA	NA	CHEMBL10	NA	NA
+HA-1004	NA	Drosophila melanogaster	Oregon R	1-10 µM	18	NA	NA	NA	22363408	NA	NA	CHEMBL143054	NA	NA
+Erbstatin analog	NA	Drosophila melanogaster	Oregon R	5 mM	18	NA	NA	NA	22363408	NA	NA	CHEMBL17329	NA	NA
+PD-98059	NA	Drosophila melanogaster	Oregon R	300-1000 µM	27	NA	NA	NA	22363408	NA	NA	CHEMBL35482	NA	NA
+PP2 AG1879	NA	Drosophila melanogaster	Oregon R	300 µM	22.8	NA	NA	NA	22363408	NA	NA	CHEMBL406845	NA	NA
+Tyrphostin AG 1295	NA	Drosophila melanogaster	Oregon R	300-500 µM	22.5	NA	NA	NA	22363408	NA	NA	CHEMBL7724	2048	NA
+Tyrphostin AG 1478	NA	Drosophila melanogaster	Oregon R	100 µM	19.5	NA	NA	NA	22363408	NA	NA	CHEMBL7917	2051	NA
+Damnacanthus officinarum leaf extract	NA	Caenorhabditis elegans	N2	1200 µg/mL	18.6	NA	NA	NA	22370553	Mix	NA	NA	NA	NA
+Medium-chain triglyceride oil	NA	Mus musculus	UM-HET3	60000mg/kg of diet	-1.1	NA	Male	NS	22451473	Mix	NA	NA	NA	NA
+1,2,4-triazolo[1,5-a]pyridine	NA	Caenorhabditis elegans	N2	500 nM	12	NA	NA	NA	22509764	NA	NA	NA	67508	NA
+HuminFeed	NA	Caenorhabditis elegans	N2	400 µM	12.5	NA	NA	NA	22529848	Mix	NA	NA	NA	NA
+D-chiro-inositol	NA	Drosophila melanogaster	Canton S	NA	16.6	NA	Male	NA	22843669	NA	NA	CHEMBL1222251, CHEMBL1231671, CHEMBL1950780, CHEMBL3976780	892	DB03106, DB13178
+Cynomorium songaricum Rupr.	Suoyang	Drosophila melanogaster	Canton S	10 mg/ml	1.5	NA	Male	NS	22844336	Mix	NA	NA	NA	NA
+Black rice extract	NA	Drosophila melanogaster	Oregon R	30 mg/ml	14	NA	NA	NA	22930061	Mix	NA	NA	NA	NA
+Apple flesh	NA	Saccharomyces cerevisiae	MCY4/KlLSM4::kanMX4	1 gr	7	NA	NA	NS	22970337	Mix	NA	NA	NA	NA
+4-hydroxy-E-globularinin	NA	Caenorhabditis elegans	N2	200 uM	6.4	NA	NA	NA	23000058	ID's Not Found	NA	NA	NA	NA
+Nolinospiroside F	NA	Saccharomyces cerevisiae	K6001	10 µM	21.3	NA	NA	NA	23439553	NA	NA	NA	21630160	NA
+Malate	NA	Caenorhabditis elegans	N2	10 mM	14	NA	NA	NA	23472183	NA	NA	CHEMBL1455497	NA	DB12751
+Ascr#2	hydroxy ketone ascaroside	Caenorhabditis elegans	N2	400 nM	14	NA	NA	NA	23509272	NA	NA	CHEMBL1221888	16066475	NA
+Arsenite	NA	Caenorhabditis elegans	N2	100 nM	10	NA	NA	NA	23534459	NA	NA	CHEMBL1231071	NA	NA
+Ethidium bromide	NA	Caenorhabditis elegans	N2	5 µg/ml	30.1	NA	NA	NA	23698443	NA	NA	CHEMBL284328	NA	NA
+GYY4137	NA	Caenorhabditis elegans	N2	100 µM	0.4	NA	NA	NA	24093496	NA	NA	CHEMBL2158901	NA	NA
+Acanthophora spicifera extract	Red Algae extract	Brachionus manjavacas	NA	5 µg/ml	14	NA	NA	NA	24120568	Mix	NA	NA	NA	NA
+Peyssonnelia sp. extract	Red Algae extract	Brachionus manjavacas	NA	2 µg/ml	8.5	NA	NA	NA	24120568	Mix	NA	NA	NA	NA
+LY-165,163	PAPP	Caenorhabditis elegans	NA	33 µM	33	NA	NA	NA	24134630	NA	NA	CHEMBL1256693	NA	NA
+Doxycycline hydrochloride	NA	Caenorhabditis elegans	NA	33 µM	18	NA	NA	NA	24134630	NA	DOXYCYCLINE HYDROCHLORIDE	CHEMBL1256723	54685920	DBSALT000897
+Psora-4	NA	Caenorhabditis elegans	NA	88 µM	42	NA	NA	NA	24134630	NA	NA	CHEMBL1256851	NA	NA
+Trequinsin hydrochloride	NA	Caenorhabditis elegans	NA	88µM	27	NA	NA	NA	24134630	NA	TREQUINSIN HYDROCHLORIDE	CHEMBL1256910	3060974	NA
+Cortexolone maleate	NA	Caenorhabditis elegans	NA	33µM	11	NA	NA	NA	24134630	NA	NA	CHEMBL1554717	NA	NA
+AMN082	NA	Caenorhabditis elegans	NA	33 µM	8	NA	NA	NA	24134630	NA	NA	CHEMBL1613220	NA	NA
+LFM-A13	NA	Caenorhabditis elegans	NA	88 µM	27	NA	NA	NA	24134630	NA	NA	CHEMBL228043	NA	NA
+4-phenyl-3-furoxancarbonitrile	NA	Caenorhabditis elegans	NA	88 µM	30	NA	NA	NA	24134630	NA	NA	CHEMBL336467	NA	NA
+Cis-(Z)-Flupenthixol dihydrochloride	NA	Caenorhabditis elegans	NA	33 µM	30	NA	NA	NA	24134630	NA	NA	CHEMBL54661	NA	NA
+Dihydroergocristine methanesulfonate	NA	Caenorhabditis elegans	NA	176 µM	34	NA	NA	NA	24134630	NA	NA	CHEMBL601773	NA	NA
+Octoclothepin maleate	(+/-)-Octoclothepin maleate	Caenorhabditis elegans	NA	13 µM	38	NA	NA	NA	24134630	NA	NA	CHEMBL64249	NA	NA
+(R,R)-cis-Diethyl tetrahydro-2,8-chrysenediol	NA	Caenorhabditis elegans	NA	33 µM	7	NA	NA	NA	24134630	NA	NA	CHEMBL282489	446849	NA
+BRL 50481	NA	Caenorhabditis elegans	NA	176 µM	18	NA	NA	NA	24134630	NA	NA	CHEMBL484928	2921148	NA
+Hexahydro-sila-diphenidol	NA	Caenorhabditis elegans	NA	88 µM	15	NA	NA	NA	24134630	NA	NA	CHEMBL3545990	3602	NA
+N-(2-[4-(4-chlorophenyl)piperazin-1-yl]ethyl)-3-methoxybenzamide	NA	Caenorhabditis elegans	NA	33 µM	35	NA	NA	NA	24134630	NA	NA	CHEMBL93403	3626837	NA
+MPTP	NA	Caenorhabditis elegans	N2	10 nM	8	NA	Hermaphrodite	NA	24199155	NA	NA	CHEMBL24172	NA	NA
+Korean red ginseng tonic	Panax ginseng	Drosophila melanogaster	w1118	12 µg/ml	13.5	NA	Female	NA	24265871	Mix	NA	NA	NA	NA
+AU701	Apple pectine AU701	Drosophila melanogaster	Canton S	0.30%	1.2	NA	Male	NS	24305778	Mix	NA	NA	NA	NA
+CU701	Citrus pectine CU703	Drosophila melanogaster	Canton S	0.30%	0	NA	Male	NS	24305778	Mix	NA	NA	NA	NA
+Ludwigia octovalvis extract	NA	Drosophila melanogaster	Canton S	100 µg/ml	16.1	NA	Male	NA	24338263	Mix	NA	NA	NA	NA
+Cranberry extract	NA	Caenorhabditis elegans	N2	2 mg/ml	12.8	NA	NA	NA	24566444	Mix	NA	NA	NA	NA
+Shiquan dabu wan	SQ	Caenorhabditis elegans	N2	6.2 g/L	14.5	NA	NA	NA	24952637	Mix	NA	NA	NA	NA
+Caffeic acid phenethylester	CAPE	Caenorhabditis elegans	NA	NA	9	17	NA	NA	24964141	NA	NA	CHEMBL319244	5281787	NA
+Amla juice	Emblicaæofficinalis	Drosophila melanogaster	NA	20 ml	5.9	NA	NA	NA	24967413	Mix	NA	NA	NA	NA
+Astragalus polysaccharide	NA	Caenorhabditis elegans	N2	50 µg/ml	7	NA	NA	NA	25186652	Mix	NA	NA	NA	NA
+Bis(1-hydroxy-2,2,6,6-tetramethyl-4-piperidinyl)-decandioate	IAC	Aeolosoma viride	NA	2.5 uM	98.6	NA	NA	NA	25190068	NA	NA	NA	11272241	NA
+Mulberry leaf polyphenols	NA	Caenorhabditis elegans	N2	25 mg/mL	22.5	NA	NA	NA	25323576	Mix	NA	NA	NA	NA
+Acanthopanax sessiliflorus stem extract	NA	Caenorhabditis elegans	N2	500 mg/L	18	20	NA	NA	25324932	Mix	NA	NA	NA	NA
+Royalactin	NA	Caenorhabditis elegans	N2	0.04 ug/ml	26.8	NA	NA	NA	25456847	Mix	NA	NA	NA	NA
+Cinnamon Extract	NA	Drosophila melanogaster	w1118	75 mg/ml	37	NA	Female	NA	25456850	Mix	NA	NA	NA	NA
+Proanthocyanidins from Kunlun Chrysanthemum flowers	NA	Drosophila melanogaster	Oregon R+	NA	15.5	10.4	Female	NA	25628774	Mix	NA	NA	NA	NA
+N-acetyl-l-histidine	NA	Caenorhabditis elegans	N2	100 µM	3	NA	NA	NS	25643626	NA	NA	CHEMBL3251664	NA	NA
+Caprylate	NA	Caenorhabditis elegans	N2	100 µM	1	NA	NA	NS	25643626	NA	NA	NA	119389	NA
+DL-isocitrate	NA	Caenorhabditis elegans	N2	10 mM	-28	NA	NA	NA	25643626	NA	NA	NA	1198	NA
+Ribose	NA	Caenorhabditis elegans	N2	1 mM	9	NA	NA	NA	25643626	NA	NA	CHEMBL1159662	10975657	NA
+10-hydroxy-2-decenoic Acid	NA	Caenorhabditis elegans	N2	25 µM	10	14	NA	NA	25789174	NA	NA	NA	5312738	NA
+Garlic extract	Allium sativum	Caenorhabditis elegans	N2	50 ppm	21	NA	NA	NA	25940980	Mix	NA	NA	NA	NA
+Soybean trypsin inhibitor	NA	Caenorhabditis elegans	N2	5 uM	8.7	NA	NA	NA	25959406	Peptide	NA	NA	NA	NA
+Dehydroabietic acid	NA	Caenorhabditis elegans	N2	50 µM	4.8	8.3	NA	NS	25976661	NA	NA	CHEMBL12850	NA	NA
+Beta-Guanidinopropionic acid	NA	Drosophila melanogaster	w1118	900 mM	9.1	NA	Male	NA	26120775	NA	NA	CHEMBL20489	NA	NA
+(Iso)lappaol A	NA	Caenorhabditis elegans	N2	100 uM	11.2	NA	NA	NA	26141518	NA	NA	NA	102232211	NA
+Lappaol C	NA	Caenorhabditis elegans	N2	10 uM	11.3	NA	NA	NA	26141518	NA	NA	NA	323896	NA
+Lappaol F	NA	Caenorhabditis elegans	N2	100 uM	12.5	NA	NA	NA	26141518	NA	NA	NA	73425459	NA
+(R)-2-hydroxyglutarate	NA	Caenorhabditis elegans	NA	8 mM	42.9	NA	NA	NA	26190651	NA	NA	CHEMBL1614745	NA	NA
