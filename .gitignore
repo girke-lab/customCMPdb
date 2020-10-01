@@ -37,13 +37,3 @@ rsconnect/
 
 .DS_Store
 
-# download and intermediate files in inst/script
-inst/scripts/*.gz
-inst/scripts/*.xls
-inst/scripts/*.txt
-inst/scripts/*.tsv
-inst/scripts/*.db
-inst/scripts/*.xml
-inst/scripts/*.rds
-inst/scripts/*.zip
-inst/scripts/*.sdf

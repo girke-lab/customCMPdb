@@ -1,5 +1,12 @@
-## Changes in version 1.1.0 (2020-05-23)
+## Changes in version 1.1.0 (2020-10-02)
 + Initial version 
 
-## Changes in version 0.99.0 (2020-03-27)
-+ Stored data in AnnotationHub
+## Changes in version 0.99.0 (2020-09-30)
++ Consolidated two packages into one named as customCMPdb
++ Supported customizing compound annotation database
+  - Add customized annotation table
+  - Delete 
+  - List and set default
++ Updated query interface
+  - Supported selecting annotation resources
+  - Supported querying added customized annotations

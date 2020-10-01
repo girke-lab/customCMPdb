@@ -69,10 +69,6 @@ dbxml2df <- function(xmlfile, version) {
     return(df)
 }
 
-#' @importFrom RSQLite SQLite
-#' @importFrom RSQLite dbConnect 
-#' @importFrom RSQLite dbWriteTable 
-#' @importFrom RSQLite dbDisconnect
 #' @importFrom utils read.csv
 #' @importFrom utils unzip
 #' 

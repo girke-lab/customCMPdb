@@ -28,7 +28,6 @@
 #' @importFrom utils write.table
 #' @importFrom methods as
 #' @importFrom stats na.omit
-#' @importFrom RSQLite dbGetQuery
 #' @examples 
 #' library(ChemmineR)
 #' ## Query database
