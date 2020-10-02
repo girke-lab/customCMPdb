@@ -239,10 +239,10 @@ qres3
 
 # Supplemental Material
 ## Description of Four Annotation Tables in SQLite Database
-The DrugAge database is manually curated by experts, it contains an extensive 
+The DrugAge database is manually curated by experts. It contains an extensive 
 compilation of drugs, compounds and supplements (including natural products and 
 nutraceuticals) with anti-aging properties that extend longevity in model 
-organisms [@Barardo2017-xk]. In this package, the DrugAge database is downloaded from
+organisms [@Barardo2017-xk]. The DrugAge database was downloaded from
 [here](https://genomics.senescence.info/drugs/dataset.zip) as a CSV file. The 
 downloaded `drugage.csv` file contains `compound_name`, `synonyms`, `species`, `strain`,
 `dosage`, `avg_lifespan_change`, `max_lifespan_change`, `gender`, `significance`,
@@ -262,7 +262,7 @@ entries that are mixture like green tee extract or peptide like Bacitracin were 
 Then the `drugage_id_mapping` table was built into the annotation SQLite database
 named as `compoundCollection_0.1.db` by `buildDrugAgeDB` function.
 
-The DrugBank annotation table was obtained from the downloaded DrugBank database
+The DrugBank annotation table was downloaded from the DrugBank database
 in [xml file](https://www.drugbank.ca/releases/latest).
 The most recent release version at the time of writing this document is 5.1.5.  
 The extracted xml file was processed by the \code{dbxml2df} function in this package.
@@ -279,7 +279,7 @@ The DrugBank id to ChEMBL id mappings were obtained from
 
 The CMAP02 annotation table was processed from the downloaded compound 
 [instance table](http://www.broadinstitute.org/cmap/cmap_instances_02.xls)
-by the `buildCMAPdb` function in this package. The CMAP02 instance table contains
+using the `buildCMAPdb` function defined by this package. The CMAP02 instance table contains
 the following drug annotation columns: `instance_id`, `batch_id`, `cmap_name`, `INN1`,
 `concentration (M)`, `duration (h)`, `cell2`, `array3`, `perturbation_scan_id`, 
 `vehicle_scan_id4`, `scanner`, `vehicle`, `vendor`, `catalog_number`, `catalog_name`. 
