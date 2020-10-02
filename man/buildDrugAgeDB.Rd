@@ -30,5 +30,5 @@ the left ones were manually mapped to ChEMBL, PubChem and DrugBank ids.
 The mixed items were commented.
 }
 \examples{
- buildDrugAgeDB(dest_path=tempfile(fileext="_drugage.db"))
+buildDrugAgeDB(dest_path=tempfile(fileext="_drugage.db"))
 }

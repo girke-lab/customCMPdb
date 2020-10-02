@@ -40,7 +40,7 @@ addCustomAnnot <- function(annot_tb, annot_name){
         ans <- readline(paste("This name has existed in the SQLite database,",
                             "do you want to overwrite it? (yes/no)"))
         if(tolower(ans)=="no" | ans==""){
-            dbDisconnect()
+            dbDisconnect(conn)
             return()
         }
     }
@@ -83,7 +83,7 @@ deleteAnnot <- function(annot_name){
     conn <- dbConnect(SQLite(), annot_path)
     annot_names <- dbListTables(conn)
     if(! annot_name %in% annot_names){
-        dbDisconnect()
+        dbDisconnect(conn)
         stop("The 'annot_name' does not exist in the SQLite database!")
     }
     id_map <- dbReadTable(conn, "id_mapping")
