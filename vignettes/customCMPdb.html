@@ -2180,12 +2180,12 @@ qres2</code></pre>
 ## 3  CHEMBL1064 BRD-K22134346 simvastatin             0
 ## 4   CHEMBL113 BRD-K02404261    caffeine             1
 ## 5 CHEMBL31574          &lt;NA&gt;        &lt;NA&gt;            NA
-##                     inchi_key pubchem_cid cmp_name feature1   feature2
-## 1 CDMGBJANTYXAIV-UHFFFAOYSA-N      176155    name3       f3 -0.9599756
-## 2 HCFDWZZGGLSKEP-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;         NA
-## 3 RYMZZMVNJRMUDD-HGQWONQESA-N        -666     &lt;NA&gt;     &lt;NA&gt;         NA
-## 4 RYYVLZVUVIJVGH-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;         NA
-## 5                        &lt;NA&gt;        &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;         NA</code></pre>
+##                     inchi_key pubchem_cid cmp_name feature1    feature2
+## 1 CDMGBJANTYXAIV-UHFFFAOYSA-N      176155    name3       f3 -0.02848109
+## 2 HCFDWZZGGLSKEP-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;          NA
+## 3 RYMZZMVNJRMUDD-HGQWONQESA-N        -666     &lt;NA&gt;     &lt;NA&gt;          NA
+## 4 RYYVLZVUVIJVGH-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;          NA
+## 5                        &lt;NA&gt;        &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;          NA</code></pre>
 <p>Since the supported compound databases use different identifiers, a ChEMBL
 ID mapping table is used to connect identical entries across databases as
 well as to link out to other resources such as ChEMBL itself or PubChem. For
@@ -2209,10 +2209,10 @@ qres3</code></pre>
 <h1><span class="header-section-number">6</span> Supplemental Material</h1>
 <div id="description-of-four-annotation-tables-in-sqlite-database" class="section level2">
 <h2><span class="header-section-number">6.1</span> Description of Four Annotation Tables in SQLite Database</h2>
-<p>The DrugAge database is manually curated by experts, it contains an extensive
+<p>The DrugAge database is manually curated by experts. It contains an extensive
 compilation of drugs, compounds and supplements (including natural products and
 nutraceuticals) with anti-aging properties that extend longevity in model
-organisms <span class="citation">(Barardo et al. 2017)</span>. In this package, the DrugAge database is downloaded from
+organisms <span class="citation">(Barardo et al. 2017)</span>. The DrugAge database was downloaded from
 <a href="https://genomics.senescence.info/drugs/dataset.zip">here</a> as a CSV file. The
 downloaded <code>drugage.csv</code> file contains <code>compound_name</code>, <code>synonyms</code>, <code>species</code>, <code>strain</code>,
 <code>dosage</code>, <code>avg_lifespan_change</code>, <code>max_lifespan_change</code>, <code>gender</code>, <code>significance</code>,
@@ -2231,7 +2231,7 @@ the left ones were manually mapped to ChEMBL, PubChem and DrugBank ids. The
 entries that are mixture like green tee extract or peptide like Bacitracin were commented.
 Then the <code>drugage_id_mapping</code> table was built into the annotation SQLite database
 named as <code>compoundCollection_0.1.db</code> by <code>buildDrugAgeDB</code> function.</p>
-<p>The DrugBank annotation table was obtained from the downloaded DrugBank database
+<p>The DrugBank annotation table was downloaded from the DrugBank database
 in <a href="https://www.drugbank.ca/releases/latest">xml file</a>.
 The most recent release version at the time of writing this document is 5.1.5.<br />
 The extracted xml file was processed by the  function in this package.
@@ -2247,7 +2247,7 @@ The DrugBank id to ChEMBL id mappings were obtained from
 <a href="ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src2.txt.gz">UniChem</a>.</p>
 <p>The CMAP02 annotation table was processed from the downloaded compound
 <a href="http://www.broadinstitute.org/cmap/cmap_instances_02.xls">instance table</a>
-by the <code>buildCMAPdb</code> function in this package. The CMAP02 instance table contains
+using the <code>buildCMAPdb</code> function defined by this package. The CMAP02 instance table contains
 the following drug annotation columns: <code>instance_id</code>, <code>batch_id</code>, <code>cmap_name</code>, <code>INN1</code>,
 <code>concentration (M)</code>, <code>duration (h)</code>, <code>cell2</code>, <code>array3</code>, <code>perturbation_scan_id</code>,
 <code>vehicle_scan_id4</code>, <code>scanner</code>, <code>vehicle</code>, <code>vendor</code>, <code>catalog_number</code>, <code>catalog_name</code>.
