@@ -1966,9 +1966,10 @@ At the time of writing, the following community databases are included:</p>
 <li><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742">LINCS</a> <span class="citation">(Subramanian et al. 2017)</span></li>
 </ul>
 <p>In addition to providing access to the above compound collections, the package
-supports the integration of custom collections of compounds, that are also
-stored as SQLite and SDF instances. Both custom collections and those provided by
-this package can be queried in a uniform manner, and then further analyzed with
+supports the integration of custom collections of compounds, that will be
+automatically stored for the user in the same data structure as the
+preconfigured databases. Both custom collections and those provided by this
+package can be queried in a uniform manner, and then further analyzed with
 cheminformatics packages, such as <code>ChemmineR</code> where SDFs are imported into
 flexible S4 objects <span class="citation">(Cao et al. 2008)</span>.</p>
 </div>
@@ -2173,12 +2174,12 @@ qres2</code></pre>
 ## 3  CHEMBL1064 BRD-K22134346 simvastatin             0
 ## 4   CHEMBL113 BRD-K02404261    caffeine             1
 ## 5 CHEMBL31574          &lt;NA&gt;        &lt;NA&gt;            NA
-##                     inchi_key pubchem_cid cmp_name feature1   feature2
-## 1 CDMGBJANTYXAIV-UHFFFAOYSA-N      176155    name3       f3 -0.2246244
-## 2 HCFDWZZGGLSKEP-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;         NA
-## 3 RYMZZMVNJRMUDD-HGQWONQESA-N        -666     &lt;NA&gt;     &lt;NA&gt;         NA
-## 4 RYYVLZVUVIJVGH-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;         NA
-## 5                        &lt;NA&gt;        &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;         NA</code></pre>
+##                     inchi_key pubchem_cid cmp_name feature1  feature2
+## 1 CDMGBJANTYXAIV-UHFFFAOYSA-N      176155    name3       f3 -1.283051
+## 2 HCFDWZZGGLSKEP-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;        NA
+## 3 RYMZZMVNJRMUDD-HGQWONQESA-N        -666     &lt;NA&gt;     &lt;NA&gt;        NA
+## 4 RYYVLZVUVIJVGH-UHFFFAOYSA-N        -666     &lt;NA&gt;     &lt;NA&gt;        NA
+## 5                        &lt;NA&gt;        &lt;NA&gt;     &lt;NA&gt;     &lt;NA&gt;        NA</code></pre>
 <p>Since the supported compound databases use different identifiers, a ChEMBL
 ID mapping table is used to connect identical entries across databases as
 well as to link out to other resources such as ChEMBL itself or PubChem. For
