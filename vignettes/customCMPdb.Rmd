@@ -121,7 +121,7 @@ Instructions on how to work with `SDFset` objects are provided in the `ChemmineR
 the loaded structures with the `plot` function.
 
 ```{r da_chemmineR, eval=TRUE, message=FALSE, results=FALSE}
-ChemmineR::cid(da_sdfset) <- ChemmineR::sdfid(da_sdfset[1:2])
+ChemmineR::cid(da_sdfset) <- ChemmineR::sdfid(da_sdfset)
 ChemmineR::plot(da_sdfset[1])
 ```
 
