@@ -17,7 +17,7 @@
 #' annotation SQLite database
 #' @return DrugAge annotation SQLite database 
 #' @examples 
-#'  buildDrugAgeDB(dest_path=tempfile(fileext="_drugage.db"))
+#' buildDrugAgeDB(dest_path=tempfile(fileext="_drugage.db"))
 #' @export
 #'  
 buildDrugAgeDB <- function(dest_path){
@@ -32,6 +32,10 @@ buildDrugAgeDB <- function(dest_path){
     
     da_path <- system.file("extdata/drugage_id_mapping.tsv", 
                            package="compoundCollectionData")
+    if(da_path == ""){
+        stop("The 'drugage_id_mapping.tsv' file is under user's system directory,
+             please make sure you have access right.")
+    }
     drugAge_mapping <- read.delim(da_path)
     ## Create internal DrugAge_id named ida000xxx
     drugAge_ids <- paste0("ida",sprintf("%05d",1:nrow(drugAge_mapping)))
