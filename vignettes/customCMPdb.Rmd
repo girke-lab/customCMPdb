@@ -116,6 +116,15 @@ da_path <- ah[["AH79564"]]
 da_sdfset <- ChemmineR::read.SDFset(da_path)
 ```
 
+Instructions on how to work with `SDFset` objects are provided in the ChemmineR vignette 
+[here](https://bioconductor.org/packages/ChemmineR/). For instance, one can plot any of 
+the loaded structures with the `plot` function.
+
+```{r da_chemmineR, eval=TRUE, message=FALSE, results=FALSE}
+ChemmineR::cid(da_sdfset) <- ChemmineR::sdfid(da_sdfset[1:2])
+ChemmineR::plot(da_sdfset[1:4])
+```
+
 ## DrugBank SDF
 The SDF from DrugBank can be loaded into R the same way.  The
 corresponding SDF file was downloaded from
@@ -147,7 +156,7 @@ lincs_sdfset <- ChemmineR::read.SDFset(lincs_path)
 ```
 
 For reproducibility, the R code for generating the above datasets is included
-in the `inst/scripts/make-data.R` file of this package. The file location can
+in the `inst/scripts/make-data.R` file of this package. The file location 
 on a user's system can be obtained with `system.file("scripts/make-data.R", 
 package="compoundCollectionData")`.
 
