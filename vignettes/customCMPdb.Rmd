@@ -37,7 +37,7 @@ suppressPackageStartupMessages({
 })
 ```
 
-# Overview
+# Introduction
 
 This package serves as a query interface for important community collections of
 small molecules, while also allowing users to include custom compound
@@ -177,7 +177,7 @@ their own compound annotation tables. In this case, the corresponding
 ChEMBL IDs need to be included under the `chembl_id` column. 
 The name of the custom data set can be specified under the `annot_name` 
 argument. Note, this name is case insensitive. 
-```{r custom, eval=TRUE, message=FALSE}
+```{r custom, eval=TRUE, message=FALSE, results=FALSE}
 chembl_id <- c("CHEMBL1000309", "CHEMBL100014", "CHEMBL10",
                "CHEMBL100", "CHEMBL1000", NA)
 annot_tb <- data.frame(cmp_name=paste0("name", 1:6),
