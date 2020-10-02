@@ -1,5 +1,5 @@
 ---
-title: Integrating Community and Custom Compound Collections with `customCMPdb`
+title: "_customCMPdb_: Integrating Community and Custom Compound Collections"
 author: "Authors: Yuzhu Duan, Dan Evans, Kevin Horan, Austin Leong, Siddharth Sai and Thomas Girke"
 date: "Last update: `r format(Sys.time(), '%d %B, %Y')`" 
 output:
