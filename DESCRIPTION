@@ -1,8 +1,7 @@
 Package: customCMPdb
 Title: Customize and Query Compound Annotation Database
-Description: Query and customize interface for compound annotation database from 
-    DrugAge, DrugBank, CMAP02 and LINCS databases. It also stores the structure 
-    SDF datasets for compounds in the above four databases.
+Description: This package serves as a query interface for important community collections of
+    small molecules, while also allowing users to include custom compound collections. 
 Version: 0.99.0
 Authors@R: 
     c(person("Yuzhu", "Duan", role = c("aut", "cre"),
