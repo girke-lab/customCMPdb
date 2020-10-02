@@ -5,10 +5,10 @@ This package serves as a query interface for important community collections of
 small molecules, while also allowing users to include custom compound
 collections. At the time of writing, the following community databases are included: 
 
-+ [DrugAge](https://genomics.senescence.info/drugs/) [@Barardo2017-xk]
-+ [DrugBank](https://www.drugbank.ca/) [@Wishart2018-ap]
-+ [CMAP02](https://portals.broadinstitute.org/cmap/) [@Lamb2006-du]
-+ [LINCS](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742) [@Subramanian2017-fu]
++ [DrugAge](https://genomics.senescence.info/drugs/) 
++ [DrugBank](https://www.drugbank.ca/) 
++ [CMAP02](https://portals.broadinstitute.org/cmap/) 
++ [LINCS](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742)
 
 
 ## Installation and Loading
