@@ -1,6 +1,6 @@
 ---
-title: Customize and Query Compound Annotation Database
-author: "Authors: Yuzhu Duan, Dan Evans, Jamison McCorrison, Nicholas Schork, Kevin Horan, Austin Leong, Siddharth Sai and Thomas Girke"
+title: Integrating Community and Custom Compound Collections
+author: "Authors: Yuzhu Duan, Dan Evans, Kevin Horan, Austin Leong, Siddharth Sai and Thomas Girke"
 date: "Last update: `r format(Sys.time(), '%d %B, %Y')`" 
 output:
   BiocStyle::html_document:
@@ -58,8 +58,8 @@ supports the integration of custom collections of compounds, that will be
 automatically stored for the user in the same data structure as the
 preconfigured databases. Both custom collections and those provided by this
 package can be queried in a uniform manner, and then further analyzed with
-cheminformatics packages, such as `ChemmineR` where SDFs are imported into
-flexible S4 objects [@Cao2008-np].
+cheminformatics packages such as `ChemmineR`, where SDFs are imported into
+flexible S4 containers [@Cao2008-np].
 
 # Installation and Loading
 As Bioconductor package `customCMPdb` can be installed with the 
