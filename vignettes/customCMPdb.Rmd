@@ -116,13 +116,13 @@ da_path <- ah[["AH79564"]]
 da_sdfset <- ChemmineR::read.SDFset(da_path)
 ```
 
-Instructions on how to work with `SDFset` objects are provided in the ChemmineR vignette 
+Instructions on how to work with `SDFset` objects are provided in the `ChemmineR` vignette 
 [here](https://bioconductor.org/packages/ChemmineR/). For instance, one can plot any of 
 the loaded structures with the `plot` function.
 
 ```{r da_chemmineR, eval=TRUE, message=FALSE, results=FALSE}
 ChemmineR::cid(da_sdfset) <- ChemmineR::sdfid(da_sdfset[1:2])
-ChemmineR::plot(da_sdfset[1:4])
+ChemmineR::plot(da_sdfset[1])
 ```
 
 ## DrugBank SDF
