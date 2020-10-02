@@ -20,8 +20,8 @@ mapping table of ChEMBL IDs to IDs of individual databases. The other 4 datasets
 stores the structures of compounds in the DrugAge, DrugBank, CMAP02 and LINCS 
 databases in SDF files. For detailed description of the 5 datasets generated
 by this package, please consult to the vignette of this package by running
-\code{browseVignettes("customCMPdb")} The actual datasets are hosted in 
-\code{\link[AnnotationHub]{AnnotationHub}}.
+\code{browseVignettes("customCMPdb")}. The actual datasets are hosted in 
+\code{AnnotationHub}.
 
 This package also provides functionalities to customize and query the compound
 annotation SQLite database. Users could add their customized compound annotation
@@ -92,7 +92,7 @@ structures were obtained from PubChem CIDs via \code{\link[ChemmineR]{getIds}} f
 
 The R script of generating the above 5 datasets is available at the 
 'inst/scripts/make-data.R' file in this package.  The file location can
-be found by running \code{system.file("scripts/make-data.R",package="compoundCollectionData")}
+be found by running \code{system.file("scripts/make-data.R",package="customCMPdb")}
 in user's R session or from the 
 \href{https://github.com/yduan004/customCMPdb/blob/master/inst/scripts/make-data.R}{GitHub repository}
 of this package.

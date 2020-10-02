@@ -6,7 +6,7 @@
 
 # The SQLite database containing id mappings and drug annotation tables in
 # DrugAge, DrugBank, CMAP2 and LINCS databases
-getwd() # under compoundCollection directory
+getwd() # get user's current working directory. In my case, named as "compoundCollection"
 
 ##############
 ## DrugBank ##
@@ -17,7 +17,7 @@ getwd() # under compoundCollection directory
 ## database as 'drugbank_5.1.5.xml.zip' file to `inst/scripts` directory
 unzip("inst/scripts/drugbank_5.1.5.xml.zip", exdir="inst/scripts")
 file.rename("inst/scripts/full database.xml", "inst/scripts/drugbank_5.1.5.xml")
-library(compoundCollectionData)
+library(customCMPdb)
 drugbank_dataframe <- dbxml2df(xmlfile="inst/scripts/drugbank_5.1.5.xml", version="5.1.5")
 df2SQLite(dbdf=drugbank_dataframe, version="5.1.5", dest_dir="./inst/scripts")
 library(RSQLite)
@@ -105,7 +105,7 @@ download.file("https://portals.broadinstitute.org/cmap/cmap_instances_02.xls",
 ## Note, this file required some cleaning in LibreOffice (Excel would work for this too).
 ## The cleaning processe removes the last lines that contain cell line info.
 ## After this it was saved as tab delimited txt file named 'cmap_instances_02.txt'
-inst_path <- system.file("extdata/cmap_instances_02.txt", package="compoundCollectionData")
+inst_path <- system.file("extdata/cmap_instances_02.txt", package="customCMPdb")
 download.file("http://cluster.hpcc.ucr.edu/~tgirke/projects/longevity/cmap/data/cmap_instances_02.txt",
               "inst/scripts/cmap_instances_02.txt")
 cmap_inst <- read.delim(inst_path, check.names=FALSE)

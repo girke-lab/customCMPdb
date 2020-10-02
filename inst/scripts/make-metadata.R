@@ -46,4 +46,4 @@ meta <- data.frame(
 
 write.csv(meta, file="inst/extdata/metadata.csv", row.names=FALSE)
 
-AnnotationHubData::makeAnnotationHubMetadata("../compoundCollectionData")
+AnnotationHubData::makeAnnotationHubMetadata("../customCMPdb")

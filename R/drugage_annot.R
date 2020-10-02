@@ -31,12 +31,7 @@ buildDrugAgeDB <- function(dest_path){
     # drugAge_mapping <- drugAge_mapping[-1,]
     
     da_path <- system.file("extdata/drugage_id_mapping.tsv", 
-                           package="compoundCollectionData")
-    if(da_path == ""){
-        message("The 'drugage_id_mapping.tsv' file is under user's system directory,
-             please make sure you have access right. The process is stopped!")
-        return()
-    }
+                           package="customCMPdb")
     drugAge_mapping <- read.delim(da_path)
     ## Create internal DrugAge_id named ida000xxx
     drugAge_ids <- paste0("ida",sprintf("%05d",1:nrow(drugAge_mapping)))

@@ -30,8 +30,7 @@ character(1), path to the annotation SQLite database
 }
 \description{
 Functions could be used to add/delete user's custom compound annotations
-to the annotation SQLite database in the
-\code{\link[compoundCollectionData]{compoundCollectionData}} package.
+from the annotation SQLite database.
 The added custom compound annotation table should contains a column named as
 \code{chembl_id} that represents the ChEMBL ids of the added compounds.
 

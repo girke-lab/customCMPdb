@@ -27,8 +27,8 @@ pre code {
 
 <!---
 - Compile from command-line
-Rscript -e "rmarkdown::render('compoundCollectionData.Rmd', c('BiocStyle::html_document', 'pdf_document')); 
-knitr::knit('compoundCollectionData.Rmd', tangle=TRUE)"
+Rscript -e "rmarkdown::render('customCMPdb.Rmd', c('BiocStyle::html_document', 'pdf_document')); 
+knitr::knit('customCMPdb.Rmd', tangle=TRUE)"
 -->
 
 ```{r setup, echo=FALSE, messages=FALSE, warnings=FALSE}
@@ -158,7 +158,7 @@ lincs_sdfset <- ChemmineR::read.SDFset(lincs_path)
 For reproducibility, the R code for generating the above datasets is included
 in the `inst/scripts/make-data.R` file of this package. The file location 
 on a user's system can be obtained with `system.file("scripts/make-data.R", 
-package="compoundCollectionData")`.
+package="customCMPdb")`.
 
 # Custom Annotation Database 
 ## Load Annotation Database
