@@ -7,17 +7,18 @@
 dbxml2df(xmlfile, version)
 }
 \arguments{
-\item{xmlfile}{Character, file path to xml file of drugbank database.}
+\item{xmlfile}{Character(1), file path to the xml file downloaded from the
+DrugBank website at \url{https://www.drugbank.ca/releases/latest}}
 
-\item{version}{Character, drugbank version of the xml file}
+\item{version}{Character(1), DrugBank version of the xml file}
 }
 \value{
 Dataframe of drugbank xml database.
 }
 \description{
-Download the original drugbank database 
+Download the original DrugBank database 
 at \url{http://www.drugbank.ca/releases/latest} (xml file) into your current 
-working directory and rename as drugbank.xml
+working directory and rename as "drugbank.xml"
 then run: 
 \code{drugbank_df = dbxml2df(xmlfile="drugbank.xml", version="5.0.10")}.
 }

@@ -103,13 +103,11 @@ head(sdfid(da_cmp2))
 download.file("https://portals.broadinstitute.org/cmap/cmap_instances_02.xls",
               "inst/scripts/cmap_instances_02.xls")
 ## Note, this file required some cleaning in LibreOffice (Excel would work for this too).
-## The cleaning processe removes the last lines that contain cell line info.
+## The cleaning process removes the last lines that contain cell line info.
 ## After this it was saved as tab delimited txt file named 'cmap_instances_02.txt'
 inst_path <- system.file("extdata/cmap_instances_02.txt", package="customCMPdb")
-download.file("http://cluster.hpcc.ucr.edu/~tgirke/projects/longevity/cmap/data/cmap_instances_02.txt",
-              "inst/scripts/cmap_instances_02.txt")
 cmap_inst <- read.delim(inst_path, check.names=FALSE)
-## The useful information in this cmap instance talbe are only compound names, 
+## The useful information in this cmap instance table are only compound names, 
 ## catelog number and catelog name
 
 # Build 'cmap.db' 
@@ -118,13 +116,13 @@ cmap_inst <- read.delim(inst_path, check.names=FALSE)
 ## than expected. The 'buildCMAPdb' function builds 'cmap.db' that contains 
 ## id mapping and compound structure information.
 
-## For about 2/3 of the CMAP drungs, one can obtain their PubChem/DrugBank IDs from 
+## For about 2/3 of the CMAP drugs, one can obtain their PubChem/DrugBank IDs from 
 ## the DMAP site here: http://bio.informatics.iupui.edu/cmaps. 
 ## The SMILES strings for CMAP entries were obtained from ChemBank. Compounds 
 ## were matched by names using the 'stringdist' library where cmap_name from 
 ## CMAP were mapped to the closest name in ChemBank.
 library(ChemmineR)
-buildCMAPdb(dest_dir="inst/scripts", rerun=TRUE)
+buildCMAPdb(dest_dir="inst/scripts")
 conn <- dbConnect(SQLite(), "inst/scripts/cmap.db") # or conn <- initDb(mypath)
 results <- getAllCompoundIds(conn)
 sdfset <- getCompounds(conn, results, keepOrder=TRUE)

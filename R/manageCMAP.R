@@ -1,7 +1,7 @@
 ###################################################
 ## SQLite Structure Database for Drugs from CMAP ##
 ###################################################
-## Author: Thomas Gire
+## Author: Thomas Girke
 ## Last update: 13-May-16
 
 ## Obtaining the structures and PubChem IDs for CMAP was much harder than expected since 
@@ -10,18 +10,20 @@
 
 #' Build CMAP Database
 #' 
-#' This function builds the 'cmap.db' that contains id mappings of cmap names
-#' to PubChem/DrugBank IDs as well as compound structure information.
+#' This function builds a SQLite database named as 'cmap.db' that contains id 
+#' mappings of cmap names to PubChem/DrugBank IDs as well as compound structure information.
 #' 
-#' For about 2/3 of the CMAP drungs, one can obtain their PubChem/DrugBank IDs from 
-#' the DMAP site here: http://bio.informatics.iupui.edu/cmaps. 
+#' For about 2/3 of the CMAP drugs, one can obtain their PubChem/DrugBank IDs from 
+#' the DMAP site here: http://bio.informatics.iupui.edu/cmaps. Since this website is no
+#' longer supported, the processed CMAP name to PubChem and DrugBank ID mapping table
+#' is stored under the "inst/extdata" folder of this package named as "dmap_unique.txt".  
 #' The SMILES strings for CMAP entries were obtained from ChemBank. Compounds 
 #' were matched by names using the 'stringdist' library where cmap_name from 
 #' CMAP were mapped to the closest name in ChemBank.
-#' @param dest_dir character(1), destination direcotry under which the result 
-#' SQLite database named as 'cmap.db' stored
-#' @param rerun TRUE or FALSE indicating whether to rerun the function
-#' @return cmap.db
+#' @param dest_dir character(1), destination directory under which the result 
+#' SQLite database named as 'cmap.db' stored. The default is user's current
+#' working directory.
+#' @return write "cmap.db" SQLite database to the destination directory defined by user.
 #' @import ChemmineR
 #' @importFrom utils download.file
 #' @importFrom utils read.delim
@@ -31,6 +33,7 @@
 #' @examples 
 #' library(ChemmineR)
 #' ## Query database
+#' # buildCMAPdb(dest_dir="./inst/scripts")
 #' # conn <- initDb("/inst/scripts/cmap.db")
 #' # results <- getAllCompoundIds(conn)
 #' # sdfset <- getCompounds(conn, results, keepOrder=TRUE)
@@ -39,45 +42,24 @@
 #' # myfeat <- listFeatures(conn)
 #' # feat <- getCompoundFeatures(conn, results, myfeat)
 #' # feat[1:4,]
-buildCMAPdb <- function(dest_dir=".", rerun) {
-    if(rerun==TRUE) {
-        ## (A) For about 2/3 of the CMAP drungs one can obtain their PubChem/DrugBank IDs from 
-        ## the DMAP site here: http://bio.informatics.iupui.edu/cmaps.
-        ## The following function downloads and preprocesses the DMAP data
-        getDmap <- function(url) {
-            download.file(url, "dmap.zip")
-            unzip("dmap.zip", exdir="."); file.rename("DMAP\ V2.csv", "dmap.csv"); unlink("dmap.zip")
-            tmp <- readLines("dmap.csv")
-            tmp2 <- gsub(">,<", "\t", tmp); tmp2 <- gsub(">,", "\t", tmp2); tmp2 <- gsub(",<", "\t", tmp2); tmp2 <- gsub("^<", "", tmp2); tmp2 <- gsub(">$", "", tmp2)
-            writeLines(tmp2, "dmap2.txt")
-            dmap <- read.delim("dmap2.txt", quote="")
-            dmap <- dmap[!duplicated(dmap$SOURCE_DRUG), ]
-            write.table(dmap, "dmap_unique.txt", row.names=FALSE, quote=FALSE, sep="\t")
-            unlink(c("dmap.csv", "dmap2.txt"))
-        }
-        ## Usage:
-        getDmap(url="http://discern.uits.iu.edu:8340/PAGER/application/download/DMAP%20V2.zip")
-
-        ## (B) Join DMAP and CMAP tables
-        dmap <- read.delim("dmap_unique.txt", quote="")
-        dmap <- dmap[!duplicated(tolower(dmap$SOURCE_DRUG)), ]
+buildCMAPdb <- function(dest_dir=".") {
+        ## Join DMAP and CMAP tables
+        dmap_path <- system.file("extdata/dmap_unique.txt", package="customCMPdb")
+        dmap <- read.delim(dmap_path)
         row.names(dmap) <- tolower(dmap$SOURCE_DRUG)
-        download.file("http://www.broadinstitute.org/cmap/cmap_instances_02.xls", 
-                      "cmap_instances_02.xls")
-        cmap <- gdata::read.xls("cmap_instances_02.xls")[1:6100,] 
-        # Note: last lines contain cell line info
+        
+        cmap_inst <- system.file("extdata/cmap_instances_02.txt", package="customCMPdb")
+        cmap <- read.delim(cmap_inst)
         cmap <- cmap[!duplicated(tolower(cmap$cmap_name)),]
         row.names(cmap) <- tolower(cmap$cmap_name)
         df <- data.frame(cmap, dmap[row.names(cmap),])
-        ## This gives PubChem IDs for most of the compounds:
-        sum(!is.na(df$SOURCE_DRUG))
-        # [1] 866 # These have PubChem IDs
-        sum(is.na(df$SOURCE_DRUG))
-        # [1] 443 # These are missing
-        unlink("cmap_instances_02.xls")
-        unlink("dmap_unique.txt")
+        # sum(!is.na(df$SOURCE_DRUG))
+        # length(unique(na.omit(df$SOURCE_DRUG)))
+        # 867 cmap drugs have PubChem IDs; 442 do not have; 
+        # instance_id 1345 and 2952 with two cmap_name "betulinic acid" and "betulin"
+        # but the same SOURCE_DRUG "Betulinic Acid"
 
-        ## (C) Obtain SMILES strings for CMAP entries from ChemBank
+        ## Obtain SMILES strings for CMAP entries from ChemBank
         ## Tyler did this with help from P. Clemens from ChemBank.
         ## Compounds were matched by names using the stringdist library
         ## (here cmap_name from CMAP and the closest name in ChemBank).
@@ -93,11 +75,12 @@ buildCMAPdb <- function(dest_dir=".", rerun) {
         smipath <- system.file("extdata/smilesMatches.csv", package="customCMPdb")
         smiMA <- read.csv(smipath) 
         row.names(smiMA) <- tolower(smiMA$cmap_name)
-        bothDF <- cbind(df, smiMA[rownames(df),])
-        dim(bothDF[as.integer(bothDF[,"match_distance"]) == 0,]) 
+        bothDF <- cbind(df, smiMA[rownames(df),
+                c("chembank_id", "chembank_name", "match_distance", "smiles")])
+        #dim(bothDF[as.integer(bothDF[,"match_distance"]) == 0,]) # 1223 x 28
         # Note: compounds with match_distance > 0 need to be checked
 
-        ## (D) Create SDFset 
+        ## Create SDFset 
         #library(ChemmineR); library(ChemmineOB) # requires openbabel module
         smi <- as.character(bothDF$smiles)
         names(smi) <- as.character(bothDF$cmap_name)
@@ -105,7 +88,7 @@ buildCMAPdb <- function(dest_dir=".", rerun) {
         sdfset <- smiles2sdf(smi)
         datablock(sdfset) <- bothDF # Stores annotation info in datablock slots
 
-        ## (E) Create SQLite database
+        ## Create SQLite database
         standardFeatures <- function(sdfInput) {
             data.frame(propOB(sdfInput),
                 Ncharges=sapply(bonds(sdfInput, type="charge"), length),
@@ -114,10 +97,7 @@ buildCMAPdb <- function(dest_dir=".", rerun) {
         }
         conn <- initDb(paste0(dest_dir, "/cmap.db"))
         ids <- loadSdf(conn, sdfset, fct=standardFeatures)
-        print("Move cmap.db to 'inst/extdata/ of package and rebuild it.'")
-    } else {
-        print("To rebuild database, set 'rerun=TRUE'.")
-    }
+        dbDisconnect(conn)
 }
 
 

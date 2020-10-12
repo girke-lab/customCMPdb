@@ -4,25 +4,24 @@
 \alias{processDrugage}
 \title{Process Source DrugAge Dataset}
 \usage{
-processDrugage(
-  drugagefile = "drugage_id_mapping.tsv",
-  redownloaddrugage = FALSE
-)
+processDrugage(dest_file = "drugage_id_mapping.tsv", verbose = TRUE)
 }
 \arguments{
-\item{drugagefile}{character(1), path to the destination DrugAge annotation 
-file with id mappings}
+\item{dest_file}{character(1), file path to the generated DrugAge annotation 
+tabular file with id mappings. The default will write the file named as
+"drugage_id_mapping.tsv" to user's current working directory.}
 
-\item{redownloaddrugage}{TRUE or FALSE indicating whether to redownload the 
-DrugAge dataset if it has been downloaded before}
+\item{verbose}{logical(1), If descriptive message and list of issues should be 
+included as output}
 }
 \value{
-write the 'drugage_id_mapping.tsv' table
+write the default 'drugage_id_mapping.tsv' file to user's current working
+directory or the file path defined by users to the \code{dest_dafile} argument.
 }
 \description{
 This function processes the source DrugAge datasets by adding the ChEMBL, 
 PubChem and DrugBank id mapping information to the source DrugAge table 
-which only has comopund names without id mapping information. Source file of 
+which only has compound names without id mapping information. Source file of 
 DrugAge is linked here: \url{http://genomics.senescence.info/drugs/dataset.zip}
 }
 \details{
@@ -36,7 +35,7 @@ The mixed items were commented.
 \examples{
 library(ChemmineR)
 \dontrun{
-processDrugage(drugagefile="drugage_id_mapping.tsv", redownloaddrugage=FALSE)
+processDrugage(dest_file="drugage_id_mapping.tsv")
 # Now the missing IDs need to be added manually. A semi-manual approach is to 
 # use this web service: https://cts.fiehnlab.ucdavis.edu/batch
 }

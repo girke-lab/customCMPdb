@@ -4,24 +4,25 @@
 \alias{buildCMAPdb}
 \title{Build CMAP Database}
 \usage{
-buildCMAPdb(dest_dir = ".", rerun)
+buildCMAPdb(dest_dir = ".")
 }
 \arguments{
-\item{dest_dir}{character(1), destination direcotry under which the result 
-SQLite database named as 'cmap.db' stored}
-
-\item{rerun}{TRUE or FALSE indicating whether to rerun the function}
+\item{dest_dir}{character(1), destination directory under which the result 
+SQLite database named as 'cmap.db' stored. The default is user's current
+working directory.}
 }
 \value{
-cmap.db
+write "cmap.db" SQLite database to the destination directory defined by user.
 }
 \description{
-This function builds the 'cmap.db' that contains id mappings of cmap names
-to PubChem/DrugBank IDs as well as compound structure information.
+This function builds a SQLite database named as 'cmap.db' that contains id 
+mappings of cmap names to PubChem/DrugBank IDs as well as compound structure information.
 }
 \details{
-For about 2/3 of the CMAP drungs, one can obtain their PubChem/DrugBank IDs from 
-the DMAP site here: http://bio.informatics.iupui.edu/cmaps. 
+For about 2/3 of the CMAP drugs, one can obtain their PubChem/DrugBank IDs from 
+the DMAP site here: http://bio.informatics.iupui.edu/cmaps. Since this website is no
+longer supported, the processed CMAP name to PubChem and DrugBank ID mapping table
+is stored under the "inst/extdata" folder of this package named as "dmap_unique.txt".  
 The SMILES strings for CMAP entries were obtained from ChemBank. Compounds 
 were matched by names using the 'stringdist' library where cmap_name from 
 CMAP were mapped to the closest name in ChemBank.
@@ -29,6 +30,7 @@ CMAP were mapped to the closest name in ChemBank.
 \examples{
 library(ChemmineR)
 ## Query database
+# buildCMAPdb(dest_dir="./inst/scripts")
 # conn <- initDb("/inst/scripts/cmap.db")
 # results <- getAllCompoundIds(conn)
 # sdfset <- getCompounds(conn, results, keepOrder=TRUE)

@@ -4,9 +4,15 @@
 \alias{buildDrugAgeDB}
 \title{Build DrugAge Annotation Database}
 \usage{
-buildDrugAgeDB(dest_path)
+buildDrugAgeDB(
+  da_path = system.file("extdata/drugage_id_mapping.tsv", package = "customCMPdb"),
+  dest_path
+)
 }
 \arguments{
+\item{da_path}{character(1), file path to the tabular file generated from
+\code{processDrugage} function and manually edited the missing IDs.}
+
 \item{dest_path}{character(1), destination path of the result DrugAge 
 annotation SQLite database}
 }

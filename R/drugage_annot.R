@@ -13,6 +13,8 @@
 #' \url{https://cts.fiehnlab.ucdavis.edu/batch}. After the semi-manual process,
 #' the left ones were manually mapped to ChEMBL, PubChem and DrugBank ids. 
 #' The mixed items were commented. 
+#' @param da_path character(1), file path to the tabular file generated from
+#' \code{processDrugage} function and manually edited the missing IDs.
 #' @param dest_path character(1), destination path of the result DrugAge 
 #' annotation SQLite database
 #' @return DrugAge annotation SQLite database 
@@ -20,7 +22,8 @@
 #' buildDrugAgeDB(dest_path=tempfile(fileext="_drugage.db"))
 #' @export
 #'  
-buildDrugAgeDB <- function(dest_path){
+buildDrugAgeDB <- function(da_path=system.file("extdata/drugage_id_mapping.tsv", 
+                                    package="customCMPdb"), dest_path){
     ## Read DrugAge Mapping from inst/extdata
     
     # require(gsheet)
@@ -30,8 +33,6 @@ buildDrugAgeDB <- function(dest_path){
     # names(drugAge_mapping) <- as.character(unlist(drugAge_mapping[1,]))
     # drugAge_mapping <- drugAge_mapping[-1,]
     
-    da_path <- system.file("extdata/drugage_id_mapping.tsv", 
-                           package="customCMPdb")
     drugAge_mapping <- read.delim(da_path)
     ## Create internal DrugAge_id named ida000xxx
     drugAge_ids <- paste0("ida",sprintf("%05d",1:nrow(drugAge_mapping)))
@@ -55,7 +56,7 @@ buildDrugAgeDB <- function(dest_path){
 #' 
 #' This function processes the source DrugAge datasets by adding the ChEMBL, 
 #' PubChem and DrugBank id mapping information to the source DrugAge table 
-#' which only has comopund names without id mapping information. Source file of 
+#' which only has compound names without id mapping information. Source file of 
 #' DrugAge is linked here: \url{http://genomics.senescence.info/drugs/dataset.zip}
 #' 
 #' This function only annotates compound names that have ChEMBL 
@@ -64,74 +65,82 @@ buildDrugAgeDB <- function(dest_path){
 #' \url{https://cts.fiehnlab.ucdavis.edu/batch}. After the semi-manual process,
 #' the left ones were manually mapped to ChEMBL, PubChem and DrugBank ids. 
 #' The mixed items were commented. 
-#' @param drugagefile character(1), path to the destination DrugAge annotation 
-#' file with id mappings
-#' @param redownloaddrugage TRUE or FALSE indicating whether to redownload the 
-#' DrugAge dataset if it has been downloaded before
-#' @return write the 'drugage_id_mapping.tsv' table
+#' @param dest_file character(1), file path to the generated DrugAge annotation 
+#' tabular file with id mappings. The default will write the file named as
+#' "drugage_id_mapping.tsv" to user's current working directory.
+#' @param verbose logical(1), If descriptive message and list of issues should be 
+#' included as output
+#' @return write the default 'drugage_id_mapping.tsv' file to user's current working
+#' directory or the file path defined by users to the \code{dest_dafile} argument.
+#' @importFrom rappdirs user_cache_dir
+#' @importFrom utils untar
+#' @import BiocFileCache
 #' @examples 
 #' library(ChemmineR)
 #' \dontrun{
-#' processDrugage(drugagefile="drugage_id_mapping.tsv", redownloaddrugage=FALSE)
+#' processDrugage(dest_file="drugage_id_mapping.tsv")
 #' # Now the missing IDs need to be added manually. A semi-manual approach is to 
 #' # use this web service: https://cts.fiehnlab.ucdavis.edu/batch
 #' }
 #' @export
 #' 
-processDrugage <- function(drugagefile="drugage_id_mapping.tsv", redownloaddrugage=FALSE) {
-    if(redownloaddrugage==TRUE) {
-        download.file("http://genomics.senescence.info/drugs/dataset.zip", "downloads/dataset.zip")
-        unzip("downloads/dataset.zip", exdir="downloads/")
-    }
-    drugage <- read.csv("downloads/drugage.csv")
+processDrugage <- function(dest_file="drugage_id_mapping.tsv", verbose=TRUE) {
+    # download DrugAge dataset to Cache directory
+    dazip <- download_data("http://genomics.senescence.info/drugs/dataset.zip", 
+                            "DrugAge_dataset_zip", verbose=verbose)
+    ## read tsv file in the zip by temporally extracting zip to tempfile
+    tmpdir <- tempdir()
+    unzip(dazip, exdir=tmpdir)
+    drugage <- read.csv(paste0(tmpdir, "/drugage.csv"))
     drugage <- drugage[!duplicated(drugage$compound_name),]
+    
     ## Get mol_dict table from chembl_db
-    chembldb <- "/bigdata/girkelab/shared/lcshared/chemoinformatics/compoundDBs/chembl_24/chembl_24_sqlite/chembl_24.db"
-    mydb <- dbConnect(SQLite(), chembldb)
+    chembldb <- download_data("ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_24/archived/chembl_24_sqlite.tar.gz", 
+                           "ChEMBL24", verbose=verbose, ftpUpdate=FALSE)
+    bfc <- BiocFileCache(cache=rappdirs::user_cache_dir(appname="customCMPdb"), ask=TRUE)
+    cache_dir <- bfccache(bfc)
+    if(!dir.exists(paste0(cache_dir, "/chembl_24")))
+        untar(chembldb, exdir = cache_dir)
+    mydb <- dbConnect(SQLite(), paste0(cache_dir, "/chembl_24/chembl_24_sqlite/chembl_24.db"))
     mol_dict <- dbGetQuery(mydb, 'SELECT * FROM molecule_dictionary')
     mol_dict_sub <- mol_dict[!is.na(mol_dict$pref_name),] # mol_dict from below
     prefname <- as.character(mol_dict_sub$pref_name)
     chemblid <- as.character(mol_dict_sub$chembl_id)
     fact <- tapply(chemblid, factor(prefname), paste, collapse=", ")
-    ## Load ChEMBL to PubChem CID and DrugBank ID mappings (generated with downloadUniChem Fct)
-    chembl2pubchem <- read.delim(gzfile("downloads/src1src22.txt.gz"))
+    
+    # Load ChEMBL to PubChem CID and DrugBank ID mappings
+    ## UniChem CMP ID mappings from here: 
+    ##      https://www.ebi.ac.uk/unichem/ucquery/listSources
+    ## download ChEMBL to DrugBank mapping from UniChem in src1src2.txt.gz: 
+    chembl2db <- download_data("ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src2.txt.gz", 
+                               "chembl2drugbank", verbose = verbose)
+    ## ChEMBL to PubChem CID mapping in src1src22.txt.gz
+    chembl2pc <- download_data("ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src22.txt.gz", 
+                                "chembl2pubchem", verbose = verbose)
+    
+    chembl2pubchem <- read.delim(gzfile(chembl2pc))
     chembl2pubchem_vec <- tapply(as.character(chembl2pubchem[,2]), 
                                  factor(chembl2pubchem[,1]), paste, collapse=", ")
-    chembl2drugbank <- read.delim(gzfile("downloads/src1src2.txt.gz"))
+    chembl2drugbank <- read.delim(gzfile(chembl2db))
     chembl2drugbank_vec <- tapply(as.character(chembl2drugbank[,2]), 
                                   factor(chembl2drugbank[,1]), paste, collapse=", ")
     ## Assemble results
     drugage <- cbind(drugage, pref_name=names(fact[toupper(drugage$compound_name)]), 
                      chembl_id=fact[toupper(drugage$compound_name)])
     drugage <- cbind(drugage, pubchem_cid=chembl2pubchem_vec[as.character(drugage$chembl_id)], 
-                     drugbank_id=chembl2drugbank_vec[as.character(drugage$chembl_id)])
-    write.table(drugage, drugagefile, row.names=FALSE, quote=FALSE, sep="\t")
+                     DrugBank_id=chembl2drugbank_vec[as.character(drugage$chembl_id)])
+    write.table(drugage, dest_file, row.names=FALSE, quote=FALSE, sep="\t")
 }
 
-#############
-## UniChem ##
-#############
-## UniChem CMP ID mappings from here: 
-##      https://www.ebi.ac.uk/unichem/ucquery/listSources
-## Note: above html table gives numbering to select proper src_id for ftp downloads, 
-## e.g. DrugBank is src2
-##      ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/
-## Examples:
-downloadUniChem <- function(rerun) {
-    if(rerun==TRUE) {
-        ## ChEMBL to DrugBank mapping in src1src2.txt.gz: 
-        download.file(
-            "ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src2.txt.gz", 
-            "downloads/src1src2.txt.gz")
-        ## ChEMBL to PubChem CID mapping in src1src22.txt.gz
-        download.file(
-            "ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src22.txt.gz", 
-            "downloads/src1src22.txt.gz")
-        ## ChEMBL to ChEBI mapping in src1src7.txt.gz
-        download.file(
-            "ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src7.txt.gz", 
-            "downloads/src1src7.txt.gz")
+download_data <- function(url, rname, verbose=TRUE, ftpUpdate=TRUE){
+    bfc <- BiocFileCache(cache=rappdirs::user_cache_dir(appname="customCMPdb"), ask=TRUE)
+    rid <- bfcquery(bfc, url)$rid
+    if(!length(rid)){
+        if(verbose) message(paste("Downloading", rname, "from", url))
+        rid <- names(bfcadd(bfc, rname, url))
     }
+    # check to see if the resource needs to be updated
+    if (isTRUE(bfcneedsupdate(bfc, rid)) | ftpUpdate)
+        bfcdownload(bfc, rid, ask=TRUE)
+    bfcrpath(bfc, rids = rid)
 }
-## Usage:
-# downloadUniChem(rerun=FALSE)

@@ -12,11 +12,12 @@ df2SQLite(dbdf, version, dest_dir = ".")
 \item{version}{Character(1), version of the input drugbank dataframe generated 
 by \code{\link{dbxml2df}} function}
 
-\item{dest_dir}{destination directory that the result SQLite database located in}
+\item{dest_dir}{Character(1), destination directory that the result SQLite 
+database stored in. The default is user's current working directory}
 }
 \value{
-SQLite database (drugbank_versionNumber.db) stored under user's 
-present working directory of R session
+SQLite database named as "drugbank_<versionNumber>.db" stored under user's 
+present working directory of R session or user's specified directory.
 }
 \description{
 Store specific version of drugbank dataframe into an SQLite database 
@@ -27,7 +28,7 @@ of R session
 library(RSQLite)
 \dontrun{
 # download the original drugbank database (http://www.drugbank.ca/releases/latest) (xml file) 
-# to your current R working directory, and rename as drugbank.xml.
+# to your current R working directory, and rename as "drugbank.xml".
 # Read in the xml file and convert to a data.frame in R 
 
 drugbank_df = dbxml2df(xmlfile="drugbank.xml", version="5.1.5")
