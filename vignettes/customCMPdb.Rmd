@@ -97,7 +97,7 @@ loaded into a user's R session as follows (here for `drugAgeAnnot`).
 ```{r sql, eval=TRUE, message=FALSE}
 library(AnnotationHub)
 ah <- AnnotationHub()
-query(ah, c("compoundCollectionData", "annot_0.1"))
+query(ah, c("customCMPdb", "annot_0.1"))
 annot_path <- ah[["AH79563"]]
 library(RSQLite)
 conn <- dbConnect(SQLite(), annot_path)
@@ -111,7 +111,7 @@ dbDisconnect(conn)
 The corresponding structures for the above DrugAge example can be loaded into an `SDFset` 
 object as follows.
 ```{r da, eval=TRUE, message=FALSE, results=FALSE}
-query(ah, c("compoundCollectionData", "drugage_build2"))
+query(ah, c("customCMPdb", "drugage_build2"))
 da_path <- ah[["AH79564"]]
 da_sdfset <- ChemmineR::read.SDFset(da_path)
 ```
@@ -132,7 +132,7 @@ corresponding SDF file was downloaded from
 into R `ChemmineR` checks the validity of the imported compounds.
 
 ```{r db, eval=FALSE}
-query(ah, c("compoundCollectionData", "drugbank_5.1.5"))
+query(ah, c("customCMPdb", "drugbank_5.1.5"))
 db_path <- ah[["AH79565"]]
 db_sdfset <- ChemmineR::read.SDFset(db_path)
 ```
@@ -141,7 +141,7 @@ db_sdfset <- ChemmineR::read.SDFset(db_path)
 
 The import of the SDF of the CMAP02 database works the same way.
 ```{r cmap, eval=TRUE, message=FALSE, results=FALSE}
-query(ah, c("compoundCollectionData", "cmap02"))
+query(ah, c("customCMPdb", "cmap02"))
 cmap_path <- ah[["AH79566"]]
 cmap_sdfset <- ChemmineR::read.SDFset(cmap_path)
 ```
@@ -150,7 +150,7 @@ cmap_sdfset <- ChemmineR::read.SDFset(cmap_path)
 
 The same applies to the SDF of the small molecules included in the LINCS database.
 ```{r lincs, eval=TRUE, message=FALSE, results=FALSE}
-query(ah, c("compoundCollectionData", "lincs_pilot1"))
+query(ah, c("customCMPdb", "lincs_pilot1"))
 lincs_path <- ah[["AH79567"]]
 lincs_sdfset <- ChemmineR::read.SDFset(lincs_path)
 ```

@@ -233,7 +233,7 @@ lincs_sdfset <- readRDS("inst/scripts/lincs_sdfset.rds")
 write.SDF(lincs_sdfset, file="inst/scripts/lincs.sdf")
 
 # Save the 'cmap.sdf', 'lincs.sdf', 'drugage.sdf', 'drugbank.sdf', 'compoundCollection.db'
-# files to '../ccdata/compoundCollectionData' directory and renamed as
+# files to '../ccdata/customCMPdb' directory and renamed as
 # 'cmap02.sdf', 'lincs_pilot1.sdf', 'drugage_build2.sdf', 'drugbank_5.1.5.sdf'
 # and 'compoundCollection_0.1.db'
 # Upload the above files to AnnotationHub

@@ -35,11 +35,11 @@ meta <- data.frame(
   DispatchClass = c("FilePath", 
                     "FilePath", "FilePath",
                     "FilePath", "FilePath"),
-  RDataPath = c("compoundCollectionData/compoundCollection_0.1.db",
-                "compoundCollectionData/drugage_build2.sdf",
-                "compoundCollectionData/drugbank_5.1.5.sdf",
-                "compoundCollectionData/cmap02.sdf",
-                "compoundCollectionData/lincs_pilot1.sdf"),
+  RDataPath = c("customCMPdb/compoundCollection_0.1.db",
+                "customCMPdb/drugage_build2.sdf",
+                "customCMPdb/drugbank_5.1.5.sdf",
+                "customCMPdb/cmap02.sdf",
+                "customCMPdb/lincs_pilot1.sdf"),
   Tags = c("annot", "drugage", "drugbank",
            "cmap", "lincs")
 )

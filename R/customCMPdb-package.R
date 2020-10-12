@@ -111,7 +111,7 @@
 #'     ah <- AnnotationHub()
 #'     
 #'     ## Load compoundCollection annotation SQLite database
-#'     query(ah, c("compoundCollectionData", "annot_0.1"))
+#'     query(ah, c("customCMPdb", "annot_0.1"))
 #'     annot_path <- ah[["AH79563"]]
 #'     library(RSQLite)
 #'     conn <- dbConnect(SQLite(), annot_path)
@@ -121,22 +121,22 @@
 #'     dbDisconnect(conn)
 #'     
 #'     ## Load DrugAge SDF file
-#'     query(ah, c("compoundCollectionData", "drugage_build2"))
+#'     query(ah, c("customCMPdb", "drugage_build2"))
 #'     da_path <- ah[["AH79564"]]
 #'     da_sdfset <- ChemmineR::read.SDFset(da_path)
 #'     
 #'     ## Load DrugBank SDF file
-#'     query(ah, c("compoundCollectionData", "drugbank_5.1.5"))
+#'     query(ah, c("customCMPdb", "drugbank_5.1.5"))
 #'     db_path <- ah[["AH79565"]]
 #'     db_sdfset <- ChemmineR::read.SDFset(db_path)
 #'     
 #'     ## Load CMAP SDF file
-#'     query(ah, c("compoundCollectionData", "cmap02"))
+#'     query(ah, c("customCMPdb", "cmap02"))
 #'     cmap_path <- ah[["AH79566"]]
 #'     cmap_sdfset <- ChemmineR::read.SDFset(cmap_path)
 #'     
 #'     ## Load LINCS SDF file
-#'     query(ah, c("compoundCollectionData", "lincs_pilot1"))
+#'     query(ah, c("customCMPdb", "lincs_pilot1"))
 #'     lincs_path <- ah[["AH79567"]]
 #'     lincs_sdfset <- ChemmineR::read.SDFset(lincs_path)
 #' }
