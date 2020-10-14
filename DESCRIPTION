@@ -2,7 +2,7 @@ Package: customCMPdb
 Title: Customize and Query Compound Annotation Database
 Description: This package serves as a query interface for important community collections of
     small molecules, while also allowing users to include custom compound collections. 
-Version: 0.99.6
+Version: 0.99.7
 Authors@R: 
     c(person("Yuzhu", "Duan", role = c("aut", "cre"), email = "yduan004@ucr.edu"),
       person("Thomas", "Girke", role = "aut", email = "thomas.girke@ucr.edu"))
