@@ -1,4 +1,5 @@
-#‘ Get Compound Structures from Four Resources
+#‘ 
+#' Get Compound Structures from Four Resources
 #'
 #' This function could be used to get SDFset of compounds in CMAP2, LINCS, DrugAge
 #' or DrugBank databases. The \code{cid} of the SDFset are compound names instead
@@ -8,7 +9,7 @@
 #' @return SDFset object of compounds in the \code{source} database, the \code{cid}
 #' of the SDFset are compound names.
 #' @seealso 
-#' \code{\link[ChemmineR]{SDFsets}}
+#' \code{\link[ChemmineR]{SDFset}}
 #' @examples
 #' da_sdf <- getSDFwithName(source="DrugAge")
 #' @export
