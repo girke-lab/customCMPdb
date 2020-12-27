@@ -250,7 +250,7 @@ and `pubmed_id` annotation columns. Since the DrugAge database only contains the
 drug name as identifiers, it is necessary to map the drug name to other uniform
 drug identifiers, such as ChEMBL IDs. In this package,
 the drug names have been mapped to [ChEMBL](https://www.ebi.ac.uk/chembl/) [@Gaulton2012-ji],
-[PubChem]((https://pubchem.ncbi.nlm.nih.gov/) [@Kim2019-tg] and DrugBank IDs semi-manually
+[PubChem](https://pubchem.ncbi.nlm.nih.gov/) [@Kim2019-tg] and DrugBank IDs semi-manually
 and stored under the `inst/extdata` directory named as `drugage_id_mapping.tsv`. 
 Part of the id mappings in the `drugage_id_mapping.tsv` table is generated 
 by the \code{processDrugage} function for compound names that have ChEMBL 
