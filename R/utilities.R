@@ -1,9 +1,9 @@
 #‘ 
-#' Get Compound Structures from Four Resources
+#' Load Compound Structures from Four Resources
 #'
-#' This function could be used to get SDFset of compounds in CMAP2, LINCS, DrugAge
-#' or DrugBank databases. The \code{cid} of the SDFset are compound names instead
-#' of their internal IDs.
+#' This function could be used to get SDFset of compounds in CMAP2, LINCS 2017, 
+#' DrugAge build 2 or DrugBank 5.1.5 databases. The \code{cid} of the SDFset are 
+#' compound names instead of their internal IDs.
 #' 
 #' @param source character(1), one of "CMAP2", "LINCS", "DrugBank", "DrugAge"
 #' @return SDFset object of compounds in the \code{source} database, the \code{cid}
@@ -11,9 +11,9 @@
 #' @seealso 
 #' \code{\link[ChemmineR]{SDFset}}
 #' @examples
-#' da_sdf <- getSDFwithName(source="DrugAge")
+#' da_sdf <- loadSDFwithName(source="DrugAge")
 #' @export
-getSDFwithName <- function(source="LINCS"){
+loadSDFwithName <- function(source="LINCS"){
     ah <- AnnotationHub()
     annot_path <- ah[["AH79563"]]
     conn <- dbConnect(SQLite(), annot_path)
@@ -65,4 +65,8 @@ getSDFwithName <- function(source="LINCS"){
     }
     dbDisconnect(conn)
     return(res_sdf)
+}
+
+isCHEMBL <- function(id){
+    return(all(grepl("CHEMBL", na.omit(id))))
 }

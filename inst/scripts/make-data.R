@@ -238,4 +238,101 @@ write.SDF(lincs_sdfset, file="inst/scripts/lincs.sdf")
 # and 'compoundCollection_0.1.db'
 # Upload the above files to AnnotationHub
 
+###################################################
+## Update the SQLite database to include compound annotation tables of DrugAge build 4 and LINCS beta 2020
+###################################################
 
+#### Update lincsAnnot to include more annotations from lincs_pert_info 2017 ####
+#################################################################################
+
+conn <- loadAnnot()
+dbListTables(conn)
+idmap <- dbReadTable(conn, "id_mapping")
+cmpdb_lincs <- dbReadTable(conn, "lincsAnnot")
+data("lincs_pert_info")
+cmpdb_lincs2 <- tibble(left_join(cmpdb_lincs, select(lincs_pert_info, pert_id, MOA:selectivity_comment),
+                          by=c(lincs_id="pert_id")))
+dbWriteTable(conn, "lincsAnnot", cmpdb_lincs2, overwrite=TRUE)
+
+#### Add DrugAge build 4 annotation table ####
+##############################################
+
+library(dplyr); library(readr); library(stringr); library(magrittr)
+## clean DrugAge build 4 table
+download.file("https://genomics.senescence.info/drugs/dataset.zip", 
+              "~/insync/project/DrugAge/dataset_build4.zip")
+unzip("~/insync/project/DrugAge/dataset_build4.zip", 
+      exdir="~/insync/project/DrugAge/dataset_build4")
+drugage <- read_csv("~/insync/project/DrugAge/dataset_build4/drugage.csv")
+
+drugage_clean <- drugage %>% 
+    select(-11, -12) %>%
+    group_by(compound_name) %>% 
+    summarise_all(paste, collapse="; ")
+
+drugage_scrape <- lapply(seq_along(drugage_clean$compound_name), function(n) {
+    cat("doing", n, "\n")
+    system(paste0(
+        'curl "https://genomics.senescence.info/drugs/drug_details.php?compound_name=',
+        str_replace_all(drugage_clean$compound_name[n], " ", "%20"),
+        '"'
+    ), intern=TRUE) %>% 
+        {
+            cid <- if(length(cid_line <- str_which(., "<dt>PubChem CID")) > 0) {
+                .[cid_line + 1] %>% str_extract("[0-9]+")
+            } else NA
+            iupac <- if(length(iupac_line <- str_which(., "<dt>IUPAC Name")) > 0) {
+                .[iupac_line + 1] %>% str_remove("^[ ]+<dd>") %>% str_remove("&nbsp;</dd>\\\r$") 
+            } else NA
+            list(
+                cid = cid,
+                iupac = iupac
+            )
+        }
+})
+
+drugage_clean$pubchem_cid <- sapply(drugage_scrape, `[[`, "cid")
+drugage_clean$iupac <- sapply(drugage_scrape, `[[`, "iupac")
+drugage_clean$pubchem_cid[drugage_clean$compound_name == "1,2,4-triazolo[1,5-a]pyridine"] <- "67508"
+drugage_clean$pubchem_cid[drugage_clean$compound_name == "7-cyclopentyl-5-(4-phenoxy)phenyl-7H-pyrrolo[2,3-d]pyrimidin-4-ylamine"] <- "6603792"
+drugage_clean$pubchem_cid[drugage_clean$compound_name == "N-(2-[4-(4-chlorophenyl)piperazin-1-yl]ethyl)-3-methoxybenzamide"] <- "3626837"
+
+## get pubchem cid to ChEMBL id mapping table
+download.file("ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src22.txt.gz",
+              "~/insync/project/UniChem/chembl2pubchemcid.txt.gz") # download at 2022/01/31
+chem2pub <- read_tsv("~/insync/project/UniChem/chembl2pubchemcid.txt.gz") # 2027837 X 2
+colnames(chem2pub) <- c("chembl_id", "pubchem_cid")
+chem2pub$pubchem_cid <- as.character(chem2pub$pubchem_cid)
+drugage_clean %<>% left_join(chem2pub, by = "pubchem_cid")
+drugage_clean %>% print(width=Inf)
+write_tsv(drugage_clean, "~/insync/project/DrugAge/data/drugage4_annot.tsv")
+## Add to SQLite
+addCustomAnnot(drugage_clean, id_col="compound_name", annot_name="drugAge4")
+
+da4 <- dbReadTable(conn, "drugAge4")
+idmap <- getidmap()
+
+#### Add curated LINCS beta 2020 compound annotation table ####
+###############################################################
+data("lincs_pert_info2")
+addCustomAnnot(lincs_pert_info2, id_col="pert_id", annot_name="lincs2")
+
+cmplincs2 <- dbReadTable(conn, "lincs2")
+idmap <- getidmap()
+sample_n(idmap, 50)
+## copy and rename the cached SQLite
+cache_path <- ah[["AH79563"]]
+file.copy(cache_path, "~/insync/project/ccdata/customCMPdb/compoundCollection_0.1.db", 
+          overwrite=TRUE)
+dbDisconnect(conn)
+## Double check
+conn2 <- dbConnect(SQLite(), "~/insync/project/ccdata/customCMPdb/compoundCollection_0.1.db")
+dbListTables(conn2)
+idmap <- dbReadTable(conn2, "id_mapping")
+sample_n(idmap, 50)
+lincs_update <- dbReadTable(conn2, "lincsAnnot")
+lincs2 <- dbReadTable(conn2, "lincs2")
+da4 <- dbReadTable(conn2, "drugAge4")
+
+## Update inst/extdata/metadata.csv, ask for Bioconductor core team to update the compoundCollection_0.1.db file.
+## And upload the above files to AnnotationHub after their reply.

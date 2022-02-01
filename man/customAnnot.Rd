@@ -8,7 +8,7 @@
 \alias{defaultAnnot}
 \title{Add/Delete Custom Annotation}
 \usage{
-addCustomAnnot(annot_tb, annot_name)
+addCustomAnnot(annot_tb, id_col = NULL, annot_name, overwrite = FALSE)
 
 deleteAnnot(annot_name)
 
@@ -21,7 +21,14 @@ defaultAnnot()
 Note, it should contains a 'chembl_id' column representing the compound
 ChEMBL ids}
 
+\item{id_col}{column name in \code{annot_tb} that is used as ID column, 
+this column must contain unique identifiers. If not defined, an automatically
+generated ID column will be appended.}
+
 \item{annot_name}{character(1), user defined name of the annotation table}
+
+\item{overwrite}{a logical specifying whether to overwrite an existing table 
+or not. Its default is FALSE.}
 }
 \value{
 character vector of names of the annotation tables in the SQLite DB

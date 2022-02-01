@@ -95,12 +95,8 @@ The compound annotation tables are stored in an SQLite database. This data can b
 loaded into a user's R session as follows (here for `drugAgeAnnot`).
 
 ```{r sql, eval=TRUE, message=FALSE}
-library(AnnotationHub)
-ah <- AnnotationHub()
-query(ah, c("customCMPdb", "annot_0.1"))
-annot_path <- ah[["AH79563"]]
+conn <- loadAnnot()
 library(RSQLite)
-conn <- dbConnect(SQLite(), annot_path)
 dbListTables(conn)
 drugAgeAnnot <- dbReadTable(conn, "drugAgeAnnot")
 head(drugAgeAnnot)
@@ -111,9 +107,7 @@ dbDisconnect(conn)
 The corresponding structures for the above DrugAge example can be loaded into an `SDFset` 
 object as follows.
 ```{r da, eval=TRUE, message=FALSE, results=FALSE}
-query(ah, c("customCMPdb", "drugage_build2"))
-da_path <- ah[["AH79564"]]
-da_sdfset <- ChemmineR::read.SDFset(da_path)
+da_sdfset <- loadSDFwithName(source="DrugAge")
 ```
 
 Instructions on how to work with `SDFset` objects are provided in the `ChemmineR` vignette 
@@ -132,27 +126,21 @@ corresponding SDF file was downloaded from
 into R `ChemmineR` checks the validity of the imported compounds.
 
 ```{r db, eval=FALSE}
-query(ah, c("customCMPdb", "drugbank_5.1.5"))
-db_path <- ah[["AH79565"]]
-db_sdfset <- ChemmineR::read.SDFset(db_path)
+db_sdfset <- loadSDFwithName(source="DrugBank")
 ```
 
 ## CMAP SDF
 
 The import of the SDF of the CMAP02 database works the same way.
 ```{r cmap, eval=TRUE, message=FALSE, results=FALSE}
-query(ah, c("customCMPdb", "cmap02"))
-cmap_path <- ah[["AH79566"]]
-cmap_sdfset <- ChemmineR::read.SDFset(cmap_path)
+cmap_sdfset <- loadSDFwithName(source="CMAP2")
 ```
 
 ## LINCS SDF
 
 The same applies to the SDF of the small molecules included in the LINCS database.
 ```{r lincs, eval=TRUE, message=FALSE, results=FALSE}
-query(ah, c("customCMPdb", "lincs_pilot1"))
-lincs_path <- ah[["AH79567"]]
-lincs_sdfset <- ChemmineR::read.SDFset(lincs_path)
+lincs_sdfset <- loadSDFwithName(source="LINCS")
 ```
 
 For reproducibility, the R code for generating the above datasets is included
@@ -228,7 +216,7 @@ qres2
 
 Since the supported compound databases use different identifiers, a ChEMBL
 ID mapping table is used to connect identical entries across databases as
-well as to link out to other resources such as ChEMBL itself or PubChem.  For
+well as to link out to other resources such as ChEMBL itself or PubChem. For
 custom compounds, where ChEMBL IDs are not available yet, one can use
 alternative and/or custom identifiers.
 ```{r not_chembl, eval=TRUE, message=FALSE}
@@ -238,11 +226,11 @@ qres3
 ```
 
 # Supplemental Material
-## Description of Four Annotation Tables in SQLite Database
+## Description of Annotation Tables in SQLite Database
 The DrugAge database is manually curated by experts. It contains an extensive 
 compilation of drugs, compounds and supplements (including natural products and 
 nutraceuticals) with anti-aging properties that extend longevity in model 
-organisms [@Barardo2017-xk]. The DrugAge database was downloaded from
+organisms [@Barardo2017-xk]. The DrugAge build2 database was downloaded from
 [here](https://genomics.senescence.info/drugs/dataset.zip) as a CSV file. The 
 downloaded `drugage.csv` file contains `compound_name`, `synonyms`, `species`, `strain`,
 `dosage`, `avg_lifespan_change`, `max_lifespan_change`, `gender`, `significance`,
@@ -260,9 +248,9 @@ manually. A semi-manual approach was to use this
 the left ones were manually mapped to ChEMBL, PubChem and DrugBank ids. The 
 entries that are mixture like green tee extract or peptide like Bacitracin were commented.
 Then the `drugage_id_mapping` table was built into the annotation SQLite database
-named as `compoundCollection_0.1.db` by `buildDrugAgeDB` function.
+named as `compoundCollection_0.1.db` with table name of `drugAgeAnnot` by `buildDrugAgeDB` function.
 
-The DrugBank annotation table was downloaded from the DrugBank database
+The DrugBank annotation table (`DrugBankAnnot`) was downloaded from the DrugBank database
 in [xml file](https://www.drugbank.ca/releases/latest).
 The most recent release version at the time of writing this document is 5.1.5.  
 The extracted xml file was processed by the \code{dbxml2df} function in this package.
@@ -277,7 +265,7 @@ There are 55 annotation columns in the DrugBank annotation table, such as
 The DrugBank id to ChEMBL id mappings were obtained from 
 [UniChem](ftp://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src2.txt.gz).
 
-The CMAP02 annotation table was processed from the downloaded compound 
+The CMAP02 annotation table (`cmapAnnot`) was processed from the downloaded compound 
 [instance table](http://www.broadinstitute.org/cmap/cmap_instances_02.xls)
 using the `buildCMAPdb` function defined by this package. The CMAP02 instance table contains
 the following drug annotation columns: `instance_id`, `batch_id`, `cmap_name`, `INN1`,
@@ -295,13 +283,18 @@ The CMAP02 annotation table was stored in the `compoundCollection` SQLite annota
 database. Then the CMAP internal IDs to ChEMBL id mappings were added to the ID 
 mapping table. 
 
-The LINCS compound annotation table was downloaded from 
+The LINCS 2017 compound annotation table (`lincsAnnot`) was downloaded from 
 [GEO](ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92742/suppl/GSE92742_Broad_LINCS_pert_info.txt.gz)
 where only compounds were selected. The annotation columns are `lincs_id`, `pert_name`,
 `pert_type`, `is_touchstone`, `inchi_key_prefix`, `inchi_key`, `canonical_smiles`, `pubchem_cid`.
 The annotation table was stored in the `compoundCollection` SQLite annotation database. 
 Since the annotation only contains LINCS id to PubChem CID mapping, the LINCS ids 
 were also mapped to ChEMBL ids via inchi key.
+
+The SQLite annotation database also contains compound annotation tables of
+`drugAge4` and `lincs2`. They contain annotations for compounds
+in DrugAge build 4 database, and the newest LINCS beta database released in 2020
+at [CLUE](https://clue.io/releases/data-dashboard).
 
 # Session Info
 ```{r sessionInfo}

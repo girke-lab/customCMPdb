@@ -1,3 +1,6 @@
+## Changes in version 1.5.1 (2022-01-31)
++ Add DrugAge build 4 database 
+
 ## Changes in version 1.1.0 (2020-10-02)
 + Initial version 
 

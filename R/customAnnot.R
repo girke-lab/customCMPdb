@@ -1,3 +1,19 @@
+#' Load Compound Annotation Database
+#' 
+#' The compound annotation tables from different databases/sources are stored
+#' in one SQLite database. This function can be used to load the SQLite 
+#' annotation database
+#' @examples 
+#' conn <- loadAnnot()
+#' @export
+loadAnnot <- function(){
+    ah <- AnnotationHub()
+    # query(ah, c("customCMPdb", "annot_0.1"))
+    annot_path <- ah[["AH79563"]]
+    conn <- dbConnect(SQLite(), annot_path)
+    return(conn)
+}
+
 #' Add/Delete Custom Annotation
 #'
 #' Functions could be used to add/delete user's custom compound annotations
@@ -10,7 +26,12 @@
 #' @param annot_tb data.frame representing the custom annotation table,
 #' Note, it should contains a 'chembl_id' column representing the compound
 #' ChEMBL ids
+#' @param id_col column name in \code{annot_tb} that is used as ID column, 
+#' this column must contain unique identifiers. If not defined, an automatically
+#' generated ID column will be appended.
 #' @param annot_name character(1), user defined name of the annotation table
+#' @param overwrite a logical specifying whether to overwrite an existing table 
+#' or not. Its default is FALSE.
 #' @importFrom stats na.omit
 #' @examples
 #' chembl_id <- c("CHEMBL1000309", "CHEMBL100014", "CHEMBL10",
@@ -21,37 +42,50 @@
 #'         feature2=rnorm(6))
 #' addCustomAnnot(annot_tb, annot_name="mycustom3")
 #' @export
-addCustomAnnot <- function(annot_tb, annot_name){
+addCustomAnnot <- function(annot_tb, id_col=NULL, annot_name, overwrite=FALSE){
     # check validity of annot_tb
     if(! "chembl_id" %in% colnames(annot_tb)){
         stop("The input annot_tb does not contain a 'chembl_id' column,
              Please make sure that your custom comppounds have ChEMBL ids!")
     }
-    if(! any(grepl("CHEMBL", na.omit(annot_tb$chembl_id)))){
+    if(! isCHEMBL(annot_tb$chembl_id)){
         stop("The ChEMBL ids are not in the correct format, please check!")
     }
-    # check whether annot_name already exists in sqlite
-    ah <- AnnotationHub()
-    annot_path <- ah[["AH79563"]]
-    conn <- dbConnect(SQLite(), annot_path)
+    # check whether annot_name already exists in SQLite
+    conn <- loadAnnot()
     annot_names <- dbListTables(conn)
-    if(tolower(annot_name) %in% tolower(annot_names)){
-        ans <- readline(paste("This name has existed in the SQLite database,",
-                            "do you want to overwrite it? (yes/no)"))
-        if(tolower(ans)=="no" | ans==""){
-            dbDisconnect(conn)
-            return()
-        }
+    if(tolower(annot_name) %in% tolower(annot_names) & !overwrite){
+        # ans <- readline(paste("This name exists in the SQLite database,",
+        #                     "do you want to overwrite it? (yes/no)"))
+        # if(tolower(ans)=="no" | ans==""){
+        #     dbDisconnect(conn)
+        #     return()
+        # }
+        warning("The annot_name exists in the SQLite database, the old table is not overwritten, set 'overwrite=TRUE' to overwrite the existing one")
+        dbDisconnect(conn)
+        return()
     }
     ndigit <- nchar(as.character(nrow(annot_tb)))
-    annot_tb2 <- data.frame(
-        internal_id=paste0(toupper(annot_name),
-            sprintf(paste0("%0", ndigit, "d"), seq_len(nrow(annot_tb)))),
-        annot_tb
-    )
     iid_name <- paste0(annot_name, "_id")
-    colnames(annot_tb2)[1] <- iid_name
-    chem2in <- na.omit(annot_tb2[ ,c("chembl_id", iid_name)])
+    if(is.null(id_col)){
+        annot_tb <- data.frame(
+            internal_id=paste0(toupper(annot_name),
+                               sprintf(paste0("%0", ndigit, "d"), seq_len(nrow(annot_tb)))),
+            annot_tb
+        )
+        colnames(annot_tb)[1] <- iid_name
+    } else {
+        if(sum(duplicated(annot_tb[[id_col]])) > 0 | sum(is.na(annot_tb[[id_col]])) > 0){
+            stop("The id_col of annot_tb need to be unique and doesn't contain NA values!")
+        }
+        annot_tb <- data.frame(
+            internal_id=annot_tb[[id_col]],
+            annot_tb
+        )
+        colnames(annot_tb)[1] <- iid_name
+    }
+    
+    chem2in <- na.omit(annot_tb[ ,c("chembl_id", iid_name)])
 
     # write annotation table and id_mapping table to SQLite db
     id_mapping <- dbReadTable(conn, "id_mapping")
@@ -61,7 +95,7 @@ addCustomAnnot <- function(annot_tb, annot_name){
     dbWriteTable(conn, "id_mapping", id_mapping2, overwrite=TRUE)
 
     dbWriteTable(conn, annot_name,
-                 annot_tb2,
+                 annot_tb,
                  overwrite=TRUE)
     message("The SQLite database now contains the following tables:\n",
             paste(dbListTables(conn), collapse=" "))
@@ -74,12 +108,10 @@ addCustomAnnot <- function(annot_tb, annot_name){
 #' @export
 deleteAnnot <- function(annot_name){
     if(tolower(annot_name) %in% c("cmapannot", "drugageannot",
-                                  "drugbankannot", "lincsannot")){
+                                  "drugbankannot", "lincsannot", "drugage4", "lincs2")){
         stop("The default annotation resources could not be deleted!")
     }
-    ah <- AnnotationHub()
-    annot_path <- ah[["AH79563"]]
-    conn <- dbConnect(SQLite(), annot_path)
+    conn <- loadAnnot()
     annot_names <- dbListTables(conn)
     if(! annot_name %in% annot_names){
         dbDisconnect(conn)
@@ -111,9 +143,7 @@ deleteAnnot <- function(annot_name){
 #' annot_names <- listAnnot()
 #' @export
 listAnnot <- function(){
-    ah <- AnnotationHub()
-    annot_path <- ah[["AH79563"]]
-    conn <- dbConnect(SQLite(), annot_path)
+    conn <- loadAnnot()
     tb_names <- dbListTables(conn)
     annot_names <- tb_names[tb_names != "id_mapping"]
     dbDisconnect(conn)
@@ -137,9 +167,7 @@ defaultAnnot <- function(){
 }
 
 getidmap <- function(){
-    ah <- AnnotationHub()
-    annot_path <- ah[["AH79563"]]
-    conn <- dbConnect(SQLite(), annot_path)
+    conn <- loadAnnot()
     id_map <- dbReadTable(conn, "id_mapping")
     dbDisconnect(conn)
     return(id_map)

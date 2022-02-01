@@ -123,7 +123,3 @@ queryAnnotDB <- function(chembl_id,
     dbDisconnect(conn)
     return(res)
 }
-
-isCHEMBL <- function(id){
-    return(all(grepl("CHEMBL", id)))
-}
